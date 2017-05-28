@@ -1,0 +1,79 @@
+.the-header .unit-head {
+    padding: 26px;
+    padding-bottom: 12px;
+
+    text-align: center;
+
+    .nav-global {
+        .logo {
+            font-family: $fonts-heading;
+            font-weight: bold;
+
+            display: block;
+
+            padding-bottom: 18px;
+
+            a {
+                font-size: 1.5em;
+                line-height: 0;
+
+                display: inline;
+
+                margin-left: 8px;
+
+                &:hover {
+                    color: $color-hover;
+                    background-color: transparent;
+                }
+            }
+
+            button {
+                display: none;
+
+                width: 24px;
+                height: 24px;
+
+                border: none;
+            }
+
+            .btn-menu {
+                float: left;
+
+                background: url('/assets/images/theme/btn-menu.png') no-repeat;
+            }
+
+            .btn-search {
+                float: right;
+
+                background: url('/assets/images/theme/btn-search.png') no-repeat;
+            }
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: inline;
+
+                a {
+                    padding: 12px;
+                    padding-bottom: 18px;
+
+                    color: $color-text;
+                }
+
+                a:active,
+                a:hover {
+                    cursor: pointer;
+                    -webkit-transition: all .3s ease-in-out;
+                       -moz-transition: all .3s ease-in-out;
+                         -o-transition: all .3s ease-in-out;
+                            transition: all .3s ease-in-out;
+
+                    background-color: $color-hover;
+                }
+            }
+        }
+    }
+}

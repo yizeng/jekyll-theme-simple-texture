@@ -1,0 +1,70 @@
+@media only screen and (max-width: 540px) {
+    #fullPage-nav {
+        display: none; // Hide navigation dots.
+    }
+}
+
+@media only screen and (max-height: 320px) {
+    .btn-continue {
+        width: 16px;
+        height: 16px;
+        margin-left: -25px;
+
+        background-image: url('/assets/images/theme/btn-more-small.png');
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        line-height: 36px;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 1.525em;
+    }
+    h3 {
+        font-size: 1.175em;
+    }
+}
+
+@media only screen and (max-width: 480px), screen and (max-height: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.375em;
+    }
+    h3 {
+        font-size: 1.05em;
+    }
+}
+
+@media screen and (max-width: 720px), screen and (max-height: 480px) {
+    $icon-size: 32px;
+
+    .social-links {
+        a {
+            width: $icon-size;
+            height: $icon-size;
+            margin: 6px;
+
+            background-size: $icon-size $icon-size;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    $icon-size: 24px;
+
+    .social-links {
+        a {
+            width: $icon-size;
+            height: $icon-size;
+            margin: 2px;
+
+            background-size: $icon-size $icon-size;
+        }
+    }
+}

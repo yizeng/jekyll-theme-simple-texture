@@ -1,0 +1,79 @@
+$base-url: '/assets/images/simple-icons/' !default;
+$size: 48;
+
+@mixin get-ico-image($name) {
+    text-indent: -9999em;
+
+    opacity: .3;
+    background-image: url('#{$base-url}#{$name}-#{$size}.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    filter: alpha(opacity=30);
+    &:hover {
+        -webkit-transition: all .3s ease-out;
+           -moz-transition: all .3s ease-out;
+             -o-transition: all .3s ease-out;
+                transition: all .3s ease-out;
+
+        opacity: 1.0;
+
+        filter: alpha(opacity=100);
+    }
+}
+
+.social-links {
+    .ico-facebook {
+        @include get-ico-image(facebook);
+
+        background-color: #3B5998;
+    }
+
+    .ico-github {
+        @include get-ico-image(github);
+
+        background-color: #181717;
+    }
+
+    .ico-gmail {
+        @include get-ico-image(gmail);
+
+        background-color: #D14836;
+    }
+
+    .ico-instagram {
+        @include get-ico-image(instagram);
+
+        background-color: #E4405F;
+    }
+
+    .ico-linkedin {
+        @include get-ico-image(linkedin);
+
+        background-color: #0077B5;
+    }
+
+    .ico-rss {
+        @include get-ico-image(rss);
+
+        background-color: #FFA500;
+    }
+
+    .ico-stackoverflow {
+        @include get-ico-image(stackoverflow);
+
+        background-color: #FE7A16;
+    }
+
+    .ico-twitter {
+        @include get-ico-image(twitter);
+
+        background-color: #1DA1F2;
+    }
+
+    .ico-vk {
+        @include get-ico-image(vk);
+
+        background-color: #6383A8;
+    }
+}

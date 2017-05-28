@@ -1,0 +1,17 @@
+{% if tags_list.first[0] == null %}
+    {% for tag in tags_list %}
+        {% assign actual_tag_name = tag | replace:'&#32;',' ' %}
+        <li>
+            <a class="internal" data-ga="{{ actual_tag_name }}" href="{{ site.paths.tags }}#{{ actual_tag_name | replace:' ','-' | replace:'#','sharp' }}" title="{{ actual_tag_name }}">{{ actual_tag_name }} <span>{{ site.tags[actual_tag_name].size }}</span></a>
+        </li>
+    {% endfor %}
+{% else %}
+    {% for tag in tags_list %}
+        {% assign actual_tag_name = tag[0] | replace:'&#32;',' ' %}
+        <li>
+            <a class="internal" data-ga="{{ actual_tag_name }}" href="{{ site.paths.tags }}#{{ actual_tag_name | replace:' ','-' | replace:'#','sharp' }}" title="{{ actual_tag_name }}">{{ actual_tag_name }} <span>{{ tag[1].size }}</span></a>
+        </li>
+    {% endfor %}
+{% endif %}
+
+{% assign tags_list = nil %}

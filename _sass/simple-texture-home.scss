@@ -1,0 +1,183 @@
+@import 'simple-texture/home/variables';
+@import 'simple-texture/common/normalize';
+@import 'simple-texture/common/animate';
+@import 'simple-texture/common/fonts';
+@import 'simple-texture/common/helper';
+@import 'simple-texture/common/pace';
+@import 'simple-texture/common/social-icons';
+@import 'simple-texture/home/fullpage';
+
+body {
+    font-family: $fonts-body;
+    font-size: 18px;
+    line-height: 36px;
+
+    color: $color-text-dark;
+}
+
+h1 {
+    font-size: 5em;
+
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.225em;
+}
+
+h3 {
+    font-size: 1.725em;
+}
+
+.small,
+aside,
+small {
+    font-size: .75em;
+}
+
+a:hover,
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: $fonts-body;
+}
+
+.site-notice {
+    top: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    background: $color-background-dark;
+
+    a {
+        color: $color-hover;
+
+        &:hover {
+            color: $color-hover-transparent;
+        }
+    }
+}
+
+#menu {
+    display: none;
+}
+
+.section {
+    text-align: center;
+
+    span {
+        padding: 0 10px 0 10px;
+    }
+}
+
+#section0 {
+    background: url('/assets/images/theme/noisy_texture_section0-200x200.png') repeat 0 0 #F0F0F0;
+}
+
+#section1 {
+    background: url('/assets/images/theme/noisy_texture_section1-200x200.png') repeat 0 0 #150E1F;
+}
+
+#fullPage-nav {
+    span {
+        border: 1px solid #8A8A8A;
+    }
+
+    li .active span {
+        background: #707070;
+    }
+}
+
+
+.btn-light,
+.btn-dark {
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+    text-decoration: none;
+
+    color: $color-text-light;
+    border: 1px solid #150E1F;
+    outline: none;
+
+    &:hover {
+        border: 1px solid $color-text-light;
+    }
+}
+
+.btn-dark {
+    background-color: $color-background-dark !important;
+    &:hover,
+    &:focus {
+        background-color: $color-background-light !important;
+    }
+}
+
+.btn-light {
+    background-color: $color-background-light !important;
+    &:hover,
+    &:focus {
+        background-color: $color-background-dark !important;
+    }
+}
+
+.btn-enter {
+    padding: 4px 6px 0 4px;
+}
+
+.btn-continue {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 50%;
+
+    display: inline-block;
+
+    width: 32px;
+    height: 32px;
+    margin-left: -30px;
+    padding: 12px;
+
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+    text-indent: -9999em;
+
+    outline: none;
+    background-image: url('/assets/images/theme/btn-more.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    &:hover {
+        -webkit-animation-name: bounce;
+                animation-name: bounce;
+    }
+}
+
+.social-links {
+    $icon-size: 64px;
+    a {
+        display: inline-block;
+
+        width: $icon-size;
+        height: $icon-size;
+        margin: 18px;
+
+        background-size: $icon-size $icon-size;
+    }
+}
+
+@import 'simple-texture/home/responsive';

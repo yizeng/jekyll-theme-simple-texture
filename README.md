@@ -1,48 +1,124 @@
-# jekyll-theme-simple-texture
+# Simple Texture Jekyll Theme
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes` and your sass in `_sass`. To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
-
-TODO: Delete this and the text above, and describe your gem
+Simple Texture is a gem-based responsive simple texture styled Jekyll theme for [Jekyll][Jekyll] 3.3 or above,
+which can also be forked as a boilerplate for older versions of Jekyll.
 
 ## Installation
 
-Add this line to your Jekyll site's `Gemfile`:
+### As a Jekyll theme gem (Jekyll >= 3.3)
 
-```ruby
-gem "jekyll-theme-simple-texture"
-```
+If you are creating a new website or blog,
+please follow the commands below first:
 
-And add this line to your Jekyll site's `_config.yml`:
+1. Install Jekyll and [Bunlder][Bunlder]
 
-```yaml
-theme: jekyll-theme-simple-texture
-```
+       gem install jekyll bundler
 
-And then execute:
+2. Create a new Jekyll app
 
-    $ bundle
+       jekyll new jekyllapp
 
-Or install it yourself as:
+3. Enter the new directory
 
-    $ gem install jekyll-theme-simple-texture
+       cd jekyllapp
 
-## Usage
+Then for newly created or existing Jekyll app,
 
-TODO: Write usage instructions here. Describe your available layouts, includes, and/or sass.
+1. Install Bundler if haven't done so.
+
+       gem install bundler
+
+2. Download the starter kit [here](https://github.com/yizeng/jekyll-theme-simple-texture/tree/master/starter-kit).
+
+3. Put everything in the starter kit in the root directory,
+i.e. `jekyllapp` in this example.
+
+4. Run `bundle install` to install dependencies.
+
+5. Run Jekyll with `bundle exec jekyll serve`
+
+6. Hack away at <http://localhost:4000>!
+
+### As a fork
+
+1. Fork the repo [here](https://github.com/yizeng/jekyll-theme-simple-texture#fork-destination-box)
+
+2. Clone the repo just forked.
+
+       git clone git@github.com:[YOUR_USERNAME]/jekyll-theme-simple-texture.git
+
+3. Delete `starter-kit` folder and `jekyll-theme-simple-texture.gemspec` file (they're for people installing via gem)
+
+4. Install Bundler if haven't done so.
+
+    > gem install bundler
+
+5. Run `bundle install` to install dependencies.
+
+6. Run Jekyll with `bundle exec jekyll serve`
+
+7. Hack away at <http://localhost:4000>!
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/yizeng/jekyll-theme-simple-texture>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-## Development
+## Credits
 
-To set up your environment to develop this theme, run `bundle install`.
+- [Jekyll][Jekyll]
+  + [jekyll-feed](https://github.com/jekyll/jekyll-feed)
+  + [jekyll-redirect-from](https://github.com/jekyll/jekyll-redirect-from)
+  + [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag)
+  + [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
+  + [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search)
+  + [Jekyll-Bootstrap](http://jekyllbootstrap.com/)
+  + [theme-the-program](https://github.com/jekyllbootstrap/theme-the-program)
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
+- [Sass](http://sass-lang.com/)
+  + [Normalize.css](https://necolas.github.io/normalize.css/)
+  + [Animate.css](https://daneden.github.io/animate.css/)
+  + [Simple Icons](https://simpleicons.org/)
+  + [Noise Texture Generator](http://www.noisetexturegenerator.com/)
+- JavaScript
+  + [cdnjs](https://cdnjs.com/)
+  + [jQuery](https://jquery.com/)
+  + [fullPage.js](https://alvarotrigo.com/fullPage/)
+  + [pace.js](http://github.hubspot.com/pace/docs/welcome/)
+  + [Modernizr](https://modernizr.com/)
+  + [FancyBox](http://fancybox.net/)
+  + [unveil.js](http://luis-almeida.github.io/unveil/)
+- Fonts
+  + [Font Squirrel](https://www.fontsquirrel.com/)
+  + [Bitter](https://fonts.google.com/specimen/Bitter)
+  + [Junge](https://fonts.google.com/specimen/Junge)
+  + [Ubuntu Condensed](https://fonts.google.com/specimen/Ubuntu+Condensed)
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The theme is available as open source under the terms of the
+[MIT License](https://github.com/yizeng/jekyll-theme-simple-texture/blob/master/LICENSE).
 
+    MIT License
+
+    Copyright (c) 2017 Yi Zeng
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+
+[Jekyll]: http://jekyllrb.com/
+[Bunlder]: http://bundler.io/

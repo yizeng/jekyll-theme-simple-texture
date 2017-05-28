@@ -1,0 +1,104 @@
+@import 'simple-texture/blog/variables';
+@import 'simple-texture/common/normalize';
+@import 'simple-texture/common/animate';
+@import 'simple-texture/common/fonts';
+@import 'simple-texture/common/helper';
+@import 'simple-texture/common/highlight';
+@import 'simple-texture/common/pace';
+
+html {
+    background: url('/assets/images/theme/noisy_texture_section0-200x200.png') repeat 0 0 #F9F9F9;
+}
+
+body {
+    font-family: $fonts-body;
+    font-size: 18px;
+    line-height: 32px;
+
+    color: $color-text;
+}
+
+.body .unit-body {
+    padding: 12px 26px 26px 36px;
+
+    border-top: 1px solid rgba(255, 255, 255, .6);
+    background: #FFFFFF;
+    box-shadow: $color-box-border 0 0 9px;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+h1,
+h2,
+h3,
+h4 {
+    font-family: $fonts-heading;
+}
+
+.h1,
+h1 {
+    font-size: 1.725em;
+    line-height: 42px;
+
+    margin-top: 42px;
+    margin-bottom: 26px;
+}
+
+.h2,
+h2 {
+    font-size: 1.575em;
+    line-height: 42px;
+
+    margin-top: 34px;
+    margin-bottom: 16px;
+}
+
+.h3,
+h3 {
+    font-size: 1.325em;
+    line-height: 26px;
+
+    margin-top: 26px;
+    margin-bottom: 20px;
+}
+
+.h4,
+h4 {
+    font-size: 1em;
+    line-height: 26px;
+
+    margin-top: 26px;
+    margin-bottom: 12px;
+}
+
+.small,
+aside,
+small {
+    font-size: .75em;
+}
+
+a:hover,
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+img {
+    max-width: 95%;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: $fonts-body;
+}
+
+@import 'simple-texture/blog/overlay';
+@import 'simple-texture/blog/header';
+@import 'simple-texture/blog/footer';
+@import 'simple-texture/blog/content';
+@import 'simple-texture/blog/responsive';

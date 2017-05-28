@@ -1,0 +1,36 @@
+<script>
+    $(document).ready(function () {
+        var disqusPublicKey = "{{ site.disqus.public_key }}";
+        var disqusShortname = "{{ site.disqus.shortname }}";
+        var threadUrl = 'link:' + $('.comments .show-hidden').attr('data-disqus-url');
+
+        $.ajax({
+            type: 'GET',
+            url: 'https://disqus.com/api/3.0/threads/set.jsonp',
+            data: {
+                api_key: disqusPublicKey,
+                forum: disqusShortname,
+                thread: threadUrl
+            },
+            cache: false,
+            dataType: 'jsonp',
+            success: function (result) {
+                if (result.response.length === 1) {
+                    btnText = '{{ site.data.i18n[site.lang].show_comments }} (' + result.response[0].posts + ')';
+                    $('.comments .show-hidden').html(btnText);
+                }
+            }
+        });
+
+        $('.comments .show-hidden').on('click', function () {
+            $.ajaxSetup({cache: true});
+            $.getScript('http://' + disqusShortname + '.disqus.com/embed.js');
+            $.ajaxSetup({cache: false});
+            $(this).remove();
+        });
+
+        if (/\#comments/.test(location.hash)) {
+            $('.comments .show-hidden').trigger('click');
+        }
+    });
+</script>

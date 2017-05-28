@@ -1,0 +1,195 @@
+<script>
+$(document).ready(function () {
+    var offset = 50,
+        duration = 500,
+        width = 960;
+    $(window).scroll(function () {
+        if ($(window).width() > width) {
+            if ($(this).scrollTop() > offset) {
+                $('footer').css('top', '20px');
+                $('footer .back-to-top').fadeIn(duration);
+            } else {
+                $('footer').css('top', 'auto');
+                $('footer .back-to-top').fadeOut(duration);
+            }
+        }
+    });
+    $(window).resize(function () {
+        if ($(window).width() < width) {
+            $('footer').css('top', 'auto');
+            $('footer .back-to-top').fadeOut(duration);
+        }
+        if ($(window).width() >= width && $(this).scrollTop() > offset) {
+            $('footer').css('top', '20px');
+            $('footer .back-to-top').fadeIn(duration);
+        }
+    });
+
+    $('footer .back-to-top, .gotop a').on('click', function (event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, duration);
+        return false;
+    });
+
+    $('.show-hidden').on('click', function () {
+        $(this).parent().next().toggleClass("hidden");
+        $(this).toggleClass("hidden");
+    });
+});
+</script>
+
+<!-- Google Analytics Event tracking -->
+{% if site.google_analytics %}
+<script>
+$(document).ready(function () {
+    function sendGaEvent(category, action, label) {
+        if (typeof label === 'undefined') {
+            ga('send', {
+                hitType: 'event',
+                eventCategory: category,
+                eventAction: action
+            });
+        } else {
+            ga('send', {
+                hitType: 'event',
+                eventCategory: category,
+                eventAction: action,
+                eventLabel: label.trim()
+            });
+        };
+    };
+
+    function handleOutboundLinkClicks(href) {
+        ga('send', 'event', {
+            eventCategory: 'Outbound Link',
+            eventAction: 'Click',
+            eventLabel: href.trim(),
+            transport: 'beacon'
+        });
+    }
+
+    $('.external').on('click', function () {
+        handleOutboundLinkClicks($(this).attr('href'));
+    });
+
+    $('.the-header .nav-link a, [class$=wrapper] .results a').on('click', function () {
+        sendGaEvent('Blog', 'Navigate', this.textContent);
+    });
+    $('.the-header .nav-link button').on('click', function () {
+        sendGaEvent('Blog', 'Navigate', this.getAttribute('data-ga'));
+    });
+    $('.the-footer .about h4 a').on('click', function () {
+        sendGaEvent('Blog', 'Go to About');
+    });
+    $('.tag_box.categories a').on('click', function () {
+        sendGaEvent('Blog', 'Click Category', this.title);
+    });
+    $('.tag_box.tags a').on('click', function () {
+        sendGaEvent('Blog', 'Click Tag', this.title);
+    });
+    $('.unit-article .comments .show-hidden').on('click', function () {
+        sendGaEvent('Post', 'Show Comments', this.textContent);
+    });
+    $('a.internal').on('click', function () {
+        label = (this.getAttribute('data-ga') !== null)
+            ? this.getAttribute('data-ga')
+            : this.textContent;
+        sendGaEvent('Post', 'Navigate', label);
+    });
+    $('.unit-article .meta .author').on('click', function () {
+        sendGaEvent('Post', 'Show Author');
+    });
+    $('.unit-article .meta .license').on('click', function () {
+        sendGaEvent('Post', 'Show License');
+    });
+    $('.unit-article .meta .list-tag a').on('click', function () {
+        if (this.getAttribute('data-ga') !== null) {
+            sendGaEvent('Post', 'Click Tag', this.getAttribute('data-ga'));
+        }
+    });
+    $('.unit-article .meta .list-category a').on('click', function () {
+        if (this.getAttribute('data-ga') !== null) {
+            sendGaEvent('Post', 'Click Category', this.getAttribute('data-ga'));
+        }
+    });
+    $('.addthis_toolbox .btn-share-post').on('click', function () {
+        sendGaEvent('Post', 'Share Post', this.attr('title'));
+    });
+});
+</script>
+{% endif %}
+
+<!-- Show menu overlay + Jekyll Simple Search option -->
+<script src="/assets/javascripts/jekyll-search.jquery.js"></script>
+<script>
+$(document).ready(function () {
+    $('.search-field').simpleJekyllSearch({
+      jsonFile: '/search.json',
+      template: '<li><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></li>',
+      searchResults: '.search-wrapper .results',
+      searchResultsTitle: '<h4>{{ site.data.i18n[site.lang].search_results }}</h4>',
+      noResults: '<p>{{ site.data.i18n[site.lang].search_not_found }}</p>'
+    });
+});
+
+(function ($, window, undefined) {
+    var closeOverlay = function () {
+        $('.nav-wrapper, .search-wrapper').removeAttr('style');
+        $(".nav-form, .search-form").removeClass('active');
+        $("body").removeClass('nav-overlay search-overlay');
+    };
+
+    $('.nav-global .btn-search').on('click', function () {
+        $('.search-wrapper').css({display: "block"});
+        $(".search-form").addClass('active');
+        $(".search-form").find('input').focus();
+        $("body").addClass('search-overlay');
+    });
+
+    $('.nav-global .btn-menu').on('click', function () {
+        $('.nav-wrapper').css({display: "block"});
+        $(".nav-form").addClass('active');
+        $(".nav-form .search-field").prop('disabled', true);
+        $("body").addClass('nav-overlay');
+    });
+
+    $('.nav-wrapper .btn-close, .search-wrapper .btn-close').on('click', function () {
+        closeOverlay();
+    });
+
+    $(document).on('keyup', function (e) {
+        if (e.keyCode === 27) {
+            closeOverlay();
+        }
+    });
+})(jQuery, window);
+</script>
+
+<script src='//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-buttons.min.js'></script>
+<script src="/assets/javascripts/unveil/jquery.unveil.min.js"></script>
+
+<script>
+    window.jQuery.fancybox || document.write('<script src="/assets/javascripts/fancybox/jquery.fancybox.pack.js?v=2.1.4"><\/script>')
+    window.jQuery.fancybox.helpers.buttons || document.write('<script src="/assets/javascripts/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"><\/script>')
+</script>
+
+<script>
+    $("head").append('<link rel="stylesheet" href="/assets/javascripts/fancybox/jquery.fancybox.css?v=2.1.4" type="text/css" />');
+    $("head").append('<link rel="stylesheet" href="/assets/javascripts/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" />');
+    $(".post-image").fancybox({
+        prevEffect: 'none',
+        nextEffect: 'none',
+        closeBtn: true,
+        helpers: {
+            title: {
+                type: 'float'
+            }
+        }
+    });
+    $(document).ready(function () {
+        $(".post-image > img").unveil(450);
+    });
+</script>

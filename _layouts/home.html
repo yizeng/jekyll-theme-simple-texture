@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="{{ site.lang }}">
+<!--<![endif]-->
+
+<head>
+    {% include common/meta.html %}
+    <link href='/assets/stylesheets/home.css' rel="stylesheet" type="text/css">
+    {% include common/libraries.html %}
+</head>
+
+<body>
+    <ul id="menu">
+        <li data-menuanchor="bio"><a href="#bio">Biography</a></li>
+        <li data-menuanchor="social"><a href="#social">Social Links</a></li>
+    </ul>
+
+    <div id="section0" class="section" data-name="bio">
+
+        {% include common/notices.html %}
+
+        <div class="headings animated fadeInLeft">
+            {% if site.home.h1 %}<h1><span>{{ site.home.h1 }}</span></h1>{% endif %}
+            {% if site.home.h2 %}<h2><span>{{ site.home.h2 }}</span></h2>{% endif %}
+            {% if site.home.h3 %}<h3><span>{{ site.home.h3 }}</span></h3>{% endif %}
+        </div>
+        <a class="btn-continue animated bounce" data-ga="More" href="#social"></a>
+    </div>
+
+    <div id="section1" class="section" data-name="social">
+        <h1 class="animated hidden">
+            <a class="btn-enter btn-light" data-ga="Enter Blog" href="{{ site.paths.blog }}">{{ site.data.i18n[site.lang].enter_blog }}</a>
+        </h1>
+        <div class="social-links animated hidden">
+            <a class="btn-light ico-rss" href="/feed.xml" rel="me" target="_blank" title="feed"></a>
+            {% if site.author.email %}
+                <a class="btn-light ico-gmail" href="mailto:{{ site.author.email }}" rel="me" target="_blank" title="email"></a>
+            {% endif %}
+            {% for link in site.author.social_links %}
+                {% if link.url %}
+                    <a class="btn-light ico-{{ link.name }}" href="{{ link.url }}" rel="me" target="_blank" title="{{ link.name }}"></a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    {% include home/scripts.html %}
+</body>
+
+</html>

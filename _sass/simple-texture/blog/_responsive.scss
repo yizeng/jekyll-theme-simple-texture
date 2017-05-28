@@ -1,0 +1,92 @@
+/*
+	Old mobile phone width: [0, 640]
+*/
+@media only screen and (max-width: 640px) {
+    body {
+        font-size: .8em;
+        line-height: 24px;
+    }
+
+    h2,
+    h3,
+    h4 {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    h1,
+    h2 {
+        line-height: 32px;
+    }
+
+    .the-header .unit-head {
+        padding: 16px;
+        padding-bottom: 8px;
+
+        .nav-global .logo {
+            padding-bottom: 0;
+
+            a {
+                margin-left: 14px;
+                padding-top: 6px;
+                padding-bottom: 6px;
+            }
+
+            .btn-menu,
+            .btn-search {
+                display: inline;
+
+                cursor: pointer;
+            }
+        }
+
+        .nav-global ul li {
+            display: none;
+
+            .btn-search {
+                display: none;
+            }
+        }
+    }
+
+    .the-footer .social-links a {
+        width: 24px;
+        height: 24px;
+
+        background-size: 24px 24px;
+    }
+}
+
+/*
+	Smartphone width: [0, 1200]
+*/
+@media only screen and (max-width: 1200px) {
+    .unit-article {
+        .year,
+        header h1 {
+            text-align: center;
+        }
+
+        .date {
+            display: none;
+        }
+    }
+}
+/*
+	Tablet width: [1200, infinity)
+*/
+@media only screen and (min-width: 1200px) {
+    .unit-body {
+        margin-right: 12%;
+        margin-left: 12%;
+    }
+
+    .the-footer h4 a {
+        font-size: 1.25em;
+    }
+
+    .search-form .results .entry-date {
+        display: block;
+        float: right;
+    }
+}

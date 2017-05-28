@@ -1,0 +1,52 @@
+<script src="/assets/javascripts/jquery.fullPage.min.js"></script>
+<script src="/assets/javascripts/jquery.easing.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $.fn.fullpage({
+            anchors: ['bio', 'social'],
+            css3: true,
+            fixedElements: '.site-notice',
+            menu: '#menu',
+            navigation: true,
+            navigationPosition: 'right',
+            resize: false,
+            scrollingSpeed: 500,
+
+            afterLoad: function (anchorLink, index) {
+                if (index === 1) {
+                    $('#section0 .headings, #section0').removeClass('hidden').addClass('fadeInDown');
+                    $('.btn-continue').removeClass('hidden').addClass('bounce');
+                }
+                if (index === 2) {
+                    $('#section1 h1, #section1 .social-links').removeClass('hidden').addClass('fadeInUp');
+                }
+            },
+
+            onLeave: function (index, direction) {
+                if (index == 1 && direction == 'down') {
+                    $('#section0 .headings, #section0 .btn-continue').addClass('hidden').removeClass('bounce fadeInDown fadeInLeft');
+                }
+                if (index == 2 && direction == 'up') {
+                    $('#section1 h1, #section1 .social-links').addClass('hidden').removeClass('fadeInUp');
+                }
+            }
+        });
+    });
+
+</script>
+
+{% if site.google_analytics %}
+<script>
+    $("[class^='btn']").on('click', function () {
+        var label = this.textContent;
+        if (this.title !== '') {
+            label = this.title;
+        }
+        if (this.getAttribute('data-ga') !== null) {
+            label = this.getAttribute('data-ga');
+        }
+        ga('send', 'event', 'Homepage Links', 'Click', label.trim());
+    });
+
+</script>
+{% endif %}

@@ -1,0 +1,21 @@
+<div class="nav-wrapper overlay-wrapper">
+    <div class="nav-form overlay-form">
+        <span class="overlay-header menu">{{ site.data.i18n[site.lang].menu }}</span>
+        <a class="btn-close">{{ site.data.i18n[site.lang].close }}</a>
+        <div class="results">
+            <ul>
+                <li><a href="{{ site.paths.categories }}">{{ site.data.i18n[site.lang].categories }}</a></li>
+                <li><a href="{{ site.paths.tags }}">{{ site.data.i18n[site.lang].tags }}</a></li>
+                <li><a href="{{ site.paths.home }}">{{ site.data.i18n[site.lang].about }}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="search-wrapper overlay-wrapper">
+    <div class="search-form overlay-form">
+        <input type="text" class="overlay-header search-field" placeholder="{{ site.data.i18n[site.lang].search_placeholder }}">
+        <a class="btn-close">{{ site.data.i18n[site.lang].close }}</a>
+        <ul class="results"></ul>
+    </div>
+</div>

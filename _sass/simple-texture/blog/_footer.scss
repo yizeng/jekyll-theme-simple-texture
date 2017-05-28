@@ -1,0 +1,81 @@
+.the-footer {
+    font-size: .9em;
+    line-height: 1.6em;
+
+    padding: 26px;
+
+    text-align: center;
+
+    a {
+        color: $color-text;
+
+        &:hover {
+            -webkit-transition: all .3s ease-in-out;
+               -moz-transition: all .3s ease-in-out;
+                 -o-transition: all .3s ease-in-out;
+                    transition: all .3s ease-in-out;
+
+            color: $color-hover;
+        }
+    }
+
+    p {
+        a {
+            padding: 2px 3px;
+
+            color: #0077CC;
+            border-bottom: 1px dotted #FFD18D;
+
+            &:visited {
+                color: #4A6B82;
+            }
+
+            &:hover {
+                color: $color-text;
+                background-color: $color-hover-transparent;
+            }
+        }
+    }
+
+    h4 {
+        margin-top: 0;
+
+        a:hover {
+            font-weight: bold;
+        }
+    }
+
+    .back-to-top {
+        font-size: .9em;
+
+        position: fixed;
+        right: .25em;
+        bottom: .5em;
+
+        display: none;
+
+        padding: 1.2em 1.2em .2em;
+
+        text-decoration: none;
+
+        background-color: transparent;
+    }
+
+    .social-links {
+        margin-top: 12px;
+
+        $icon-size: 42px;
+
+        a {
+            display: inline-block;
+
+            width: $icon-size;
+            height: $icon-size;
+            margin: 1.5px;
+
+            background-size: $icon-size $icon-size;
+        }
+    }
+}
+
+@import 'simple-texture/common/social-icons';

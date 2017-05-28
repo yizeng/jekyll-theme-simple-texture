@@ -1,0 +1,22 @@
+<header class="the-header">
+    <div class="unit-head">
+        <div class="unit-inner unit-head-inner">
+            <nav class="nav-global">
+                <ul>
+                    <li class="logo nav-link">
+                        <button class="btn-menu" data-ga="Menu"></button>
+                        <a href="{{ site.paths.blog }}">{{ site.title }}</a>
+                        <!--[if !IE]> -->
+                        <button class="btn-search" data-ga="Search"></button>
+                        <!-- <![endif]-->
+                    </li>
+                    <li class="nav-link"><a data-ga="Categories" href="{{ site.paths.categories }}">{{ site.data.i18n[site.lang].categories }}</a></li>
+                    <li class="nav-link"><a data-ga="Tags" href="{{ site.paths.tags }}">{{ site.data.i18n[site.lang].tags }}</a></li>
+                    <!--[if !IE]> -->
+                    <li class="nav-link"><a data-ga="Search" class="btn-search" href="#">{{ site.data.i18n[site.lang].search }}</a></li>
+                    <!-- <![endif]-->
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

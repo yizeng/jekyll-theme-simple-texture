@@ -1,5 +1,72 @@
 ---
-layout: default
+layout: blog
 ---
-
-{{ content }}
+<article class="unit-article layout-post">
+    <div class="unit-inner unit-article-inner">
+        <div itemscope itemtype="http://schema.org/Article" class="content">
+            <header>
+                <div class="unit-head">
+                    <div class="unit-inner unit-head-inner">
+                        <h1 class="entry-title" itemprop="name">{{ page.title }}</h1>
+                    </div>
+                </div>
+            </header>
+            <div class="bd article-content">
+                <div class="entry-content">
+                    <div class="meta">
+                        <p class="date-publish">
+                            {{ site.data.i18n[site.lang].published }}:
+                            <time itemprop="datePublished" class="date-pub {% if page.last_updated == null %}updated{% endif %}"
+                                title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B' }} {{ page.date | date: '%d' }}, {{ page.date | date: '%Y' }} </time>
+                            by
+                            <a class="author" href="/" rel="author"><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{% if page.author == null %}{{ site.author.name }}{% else %}{{ page.author }}{% endif %}</span></span></a>
+                            <a class="license-icon" rel="license" href="{{ site.blog.cc_license }}" target="_blank">
+                                    <img alt="Creative Commons Licence" style="border-width:0" src="{{ site.blog.cc_license_image }}"  height="16" width="80"/>
+                                </a> {% if page.last_updated %} ({{ site.data.i18n[site.lang].last_updated
+                            }}:
+                            <time class="date-updated updated" title="{{ page.last_updated | date_to_xmlschema }}" datetime="{{ page.last_updated | date_to_xmlschema }}">{{ page.last_updated }}</time>) {% endif %}
+                        </p>
+                        <ul class="list-category list-linear">
+                            <li class="list-head">{{ site.data.i18n[site.lang].categories }}: </li>
+                            {% assign categories_list = page.categories | sort %} {% include helpers/categories_list %}
+                        </ul>
+                        <ul class="list-tag list-linear">
+                            <li class="list-head">{{ site.data.i18n[site.lang].tags }}: </li>
+                            {% assign tags_list = page.tags | sort %} {% include helpers/tags_list %}
+                        </ul>
+                    </div>
+                    <div itemprop="articleBody">
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+            <footer class="unit-foot">
+                <div class="unit-inner unit-foot-inner">
+                    <div class="gotop">
+                        <a class="internal" href="#page">{{ site.data.i18n[site.lang].back_to_top }}</a>
+                        {% if site.addthis_public_id %}
+                            {% include common/addthis.html %}
+                        {% endif %}
+                    </div>
+                    <nav class="pagination">
+                        {% if page.previous %}
+                            <a class="internal" data-ga="Previous Post" rel="prev" href="{{ page.previous.url }}" title="{{ site.data.i18n[site.lang].view }} '{{ page.previous.title }}'"> ← {{ page.previous.title }}</a>
+                        {% endif %}
+                        {% if page.next %}
+                            <a class="internal" data-ga="Next Post" rel="next" href="{{ page.next.url }}" title="{{ site.data.i18n[site.lang].view }} '{{ page.next.title }}'">{{ page.next.title }} → </a>
+                        {% endif %}
+                    </nav>
+                </div>
+            </footer>
+            <div class="misc-content">
+                {% if site.disqus.shortname and page.comments != false %}
+                    {% include common/disqus.html %}
+                    <div class="comments">
+                        <button class="center-block show-hidden" data-ga="Show Comments" data-disqus-url="{{ site.url }}{{ page.url }}">{{ site.data.i18n[site.lang].show_comments }}</button>
+                        <div id="disqus_thread"></div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</article>

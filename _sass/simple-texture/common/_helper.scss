@@ -1,0 +1,124 @@
+/*
+helper.css contains non-semantic helper classes
+This must be the last file to import
+
+No styleguide reference.
+*/
+/* For image replacement */
+.ir {
+    display: block;
+    overflow: hidden;
+
+    text-align: left;
+    text-indent: -999em;
+
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+
+    *line-height: 0;
+    direction: ltr;
+}
+
+.ir br {
+    display: none;
+}
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+    position: absolute;
+
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    border: none;
+}
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    position: static;
+
+    overflow: visible;
+    clip: auto;
+
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+    visibility: hidden;
+}
+/* Firefox had different box-sizing for hr. See: http://jsfiddle.net/sFgt7/ */
+hr {
+    -moz-box-sizing: content-box;
+}
+/* Contain floats: h5bp.com/q */
+#page:after,
+#page:before,
+.cf:after,
+.cf:before,
+.clearfix:after,
+.clearfix:before,
+.hasGrid:after,
+.hasGrid:before,
+.tag_box:after,
+.tag_box:before,
+.unit-inner:after,
+.unit-inner:before {
+    display: table;
+
+    content: '';
+}
+
+#page:after,
+.cf:after,
+.clearfix:after,
+.hasGrid:after,
+.tag_box:after,
+.unit-inner:after {
+    clear: both;
+}
+
+#page,
+.cf,
+.clearfix,
+.hasGrid,
+.tag_box,
+.unit-inner {
+    *zoom: 1;
+}
+
+.left {
+    float: left;
+
+    *display: inline;
+}
+
+.right {
+    float: right;
+
+    *display: inline;
+}
+
+input:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+input::-ms-clear,
+input::-webkit-search-cancel-button,
+input::-webkit-search-decoration,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+    display: none;
+}
