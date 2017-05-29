@@ -24,9 +24,9 @@
         {% include common/notices.html %}
 
         <div class="headings animated fadeInLeft">
-            {% if site.home.h1 %}<h1><span>{{ site.home.h1 }}</span></h1>{% endif %}
-            {% if site.home.h2 %}<h2><span>{{ site.home.h2 }}</span></h2>{% endif %}
-            {% if site.home.h3 %}<h3><span>{{ site.home.h3 }}</span></h3>{% endif %}
+            {% if site.home.section1 %}{{ site.home.section1 }}{% endif %}
+            {% if site.home.section2 %}{{ site.home.section2 }}{% endif %}
+            {% if site.home.section3 %}{{ site.home.section3 }}{% endif %}
         </div>
         <a class="btn-continue animated bounce" data-ga="More" href="#social"></a>
     </div>
