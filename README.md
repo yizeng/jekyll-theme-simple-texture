@@ -42,9 +42,11 @@ Then for newly created or existing Jekyll app,
 
 2. Remove Jekyll auto-generated default pages `about.md` and `index.md`.
 
-3. Download the starter kit [here](https://github.com/yizeng/jekyll-theme-simple-texture/tree/master/starter-kit).
+3. Download the respository [here](https://github.com/yizeng/jekyll-theme-simple-texture/archive/master.zip)
+and locate `starter-kit` folder,
+or download `starter-kit` folder directly [here](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/yizeng/jekyll-theme-simple-texture/tree/master/starter-kit).
 
-4. Put everything in the starter kit in the root directory,
+4. Put everything in the `starter-kit` in the root directory,
 i.e. `jekyllapp` in this example.
 
 5. Run `bundle install` to install dependencies.
