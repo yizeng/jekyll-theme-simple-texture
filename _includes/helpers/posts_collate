@@ -10,7 +10,7 @@
     {% endif %}
 
     <li>
-        <a class="active internal" href="{{ post.url }}">{{ post.title }}</a>
+        <a class="active internal" href="{{ post.url | relative_url }}">{{ post.title }}</a>
         {% if post.last_updated %}
             <span title="{{ site.data.i18n[site.lang].last_updated }}: {{ post.last_updated | date: "%b %d, %Y" }}" class="date">{{ post.date | date: "%b %d, %Y" }}</span>
         {% else %}

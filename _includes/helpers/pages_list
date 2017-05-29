@@ -4,7 +4,7 @@
             {% if page.url == node.url %}
                 <li class="active"><a class="active internal" href="{{node.url}}">{{node.title}}</a>
             {% else %}
-                <li><a class="internal" href="{{node.url}}">{{node.title}}</a>
+                <li><a class="internal" href="{{node.url | relative_url }}">{{node.title}}</a>
             {% endif %}
             <span class="date">{{ node.date | date: "%b %d, %Y" }}</span></li>
         {% endif %}

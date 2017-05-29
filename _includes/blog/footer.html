@@ -3,7 +3,7 @@
         <div class="unit-inner unit-foot-inner">
             <div class="misc vcard">
                 <div class="about">
-                    <h4><a href="{{ site.paths.home }}">{{ site.data.i18n[site.lang].about }}</a></h4>
+                    <h4><a href="{{ site.paths.home | relative_url }}">{{ site.data.i18n[site.lang].about }}</a></h4>
                     {% if site.blog.footer_content %}
                         <p>{{ site.blog.footer_content }}</p>
                     {% endif %}
@@ -13,7 +13,7 @@
                     {% if site.author.email %}
                         <a class="external ico-gmail" href="mailto:{{ site.author.email }}" rel="me" target="_blank" title="email"></a>
                     {% endif %}
-                    <a class="external ico-rss" href="/feed.xml" rel="me" target="_blank" title="feed"></a>
+                    <a class="external ico-rss" href="{{ "/feed.xml" | relative_url }}" rel="me" target="_blank" title="feed"></a>
                     {% for link in site.author.social_links %}
                         {% if link.url %}
                             <a class="external ico-{{ link.name }}" href="{{ link.url }}" rel="me" target="_blank" title="{{ link.name }}"></a>

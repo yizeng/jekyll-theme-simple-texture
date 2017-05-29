@@ -1,4 +1,4 @@
-$base-url: '/assets/images/simple-icons/' !default;
+$base-url: '../images/simple-icons/' !default;
 $size: 48;
 
 @mixin get-ico-image($name) {

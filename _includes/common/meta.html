@@ -6,7 +6,7 @@
 <meta name="keywords" content="{% if site.author.username %}{{ site.author.username }},{% endif %}{% if page.tags != null %}{{ page.tags | join: ',' }}{% else %}{{ site.blog.keywords }}{% endif %}" />
 
 {% if page.url == "/404.html" %}
-    <meta http-equiv="refresh" content="5; url={{ site.paths.blog }}">
+    <meta http-equiv="refresh" content="5; url={{ site.paths.blog | relative_url }}">
 {% endif %}
 
 {% if page.indexing == false %}
