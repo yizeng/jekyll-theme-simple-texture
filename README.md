@@ -40,16 +40,18 @@ Then for newly created or existing Jekyll app,
 
        gem install bundler
 
-2. Download the starter kit [here](https://github.com/yizeng/jekyll-theme-simple-texture/tree/master/starter-kit).
+2. Remove Jekyll auto-generated default pages `about.md` and `index.md`.
 
-3. Put everything in the starter kit in the root directory,
+3. Download the starter kit [here](https://github.com/yizeng/jekyll-theme-simple-texture/tree/master/starter-kit).
+
+4. Put everything in the starter kit in the root directory,
 i.e. `jekyllapp` in this example.
 
-4. Run `bundle install` to install dependencies.
+5. Run `bundle install` to install dependencies.
 
-5. Run Jekyll with `bundle exec jekyll serve`
+6. Run Jekyll with `bundle exec jekyll serve`
 
-6. Hack away at <http://localhost:4000>!
+7. Hack away at <http://localhost:4000>!
 
 ### As a fork
 
