@@ -1,7 +1,19 @@
 # Simple Texture Jekyll Theme
 
+![Gem Version](https://img.shields.io/gem/v/jekyll-theme-simple-texture.svg)
+
 Simple Texture is a gem-based responsive simple texture styled Jekyll theme for [Jekyll][Jekyll] 3.3 or above,
 which can also be forked as a boilerplate for older versions of Jekyll.
+
+## Demo
+
+- Starter-kit demo:
+<https://yizeng.github.io/jekyll-theme-simple-texture/>
+- My own personal blog: <http://yizeng.me/blog>
+
+![Screenshot - Home](assets/images/screenshots/home.png)
+
+![Screenshot - Blog](assets/images/screenshots/post.png)
 
 ## Installation
 
@@ -51,7 +63,7 @@ i.e. `jekyllapp` in this example.
 
 4. Install Bundler if haven't done so.
 
-    > gem install bundler
+       gem install bundler
 
 5. Run `bundle install` to install dependencies.
 
