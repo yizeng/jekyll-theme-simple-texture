@@ -728,6 +728,12 @@
                         filter: alpha(opacity=100);
                     }
                 }
+
+                .label {
+                    float: left;
+
+                    margin-right: 6px;
+                }
             }
         }
     }
