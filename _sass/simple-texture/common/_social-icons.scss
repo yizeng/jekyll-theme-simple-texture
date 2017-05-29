@@ -2,27 +2,30 @@ $base-url: '../images/simple-icons/' !default;
 $size: 48;
 
 @mixin get-ico-image($name) {
-    text-indent: -9999em;
-
-    opacity: .3;
     background-image: url('#{$base-url}#{$name}-#{$size}.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-
-    filter: alpha(opacity=30);
-    &:hover {
-        -webkit-transition: all .3s ease-out;
-           -moz-transition: all .3s ease-out;
-             -o-transition: all .3s ease-out;
-                transition: all .3s ease-out;
-
-        opacity: 1.0;
-
-        filter: alpha(opacity=100);
-    }
 }
 
 .social-links {
+    a {
+        text-indent: -9999em;
+
+        opacity: .3;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        filter: alpha(opacity=30);
+        &:hover {
+            -webkit-transition: all .3s ease-out;
+               -moz-transition: all .3s ease-out;
+                 -o-transition: all .3s ease-out;
+                    transition: all .3s ease-out;
+
+            opacity: 1.0;
+
+            filter: alpha(opacity=100);
+        }
+    }
+
     .ico-facebook {
         @include get-ico-image(facebook);
 
