@@ -15,6 +15,7 @@ gems:
 markdown: kramdown
 kramdown:
   auto_id_prefix: 'heading-'
+  smart_quotes: ["apos", "apos", "quot", "quot"]
   toc_levels: 1..3
 
 sass:
