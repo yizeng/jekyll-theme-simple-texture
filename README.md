@@ -69,11 +69,26 @@ i.e. `jekyllapp` in this example.
 
        gem install bundler
 
-5. Run `bundle install` to install dependencies.
+5. Update the `Gemfile` to look like the following:
 
-6. Run Jekyll with `bundle exec jekyll serve`
+   ```ruby
+   source "https://rubygems.org"
 
-7. Hack away at <http://localhost:4000>!
+   gem 'jekyll'
+
+   group :jekyll_plugins do
+     gem 'jekyll-feed'
+     gem 'jekyll-redirect-from'
+     gem 'jekyll-seo-tag'
+     gem 'jekyll-sitemap'
+   end
+   ```
+
+6. Run `bundle install` to install dependencies.
+
+7. Run Jekyll with `bundle exec jekyll serve`
+
+8. Hack away at <http://localhost:4000>!
 
 ## Contributing
 
