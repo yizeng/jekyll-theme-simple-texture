@@ -43,80 +43,44 @@ $(document).ready(function () {
 <!-- Google Analytics Event tracking -->
 {% if site.google_analytics %}
 <script>
-$(document).ready(function () {
-    function sendGaEvent(category, action, label) {
-        if (typeof label === 'undefined') {
-            ga('send', {
-                hitType: 'event',
-                eventCategory: category,
-                eventAction: action
-            });
-        } else {
-            ga('send', {
-                hitType: 'event',
-                eventCategory: category,
-                eventAction: action,
-                eventLabel: label.trim()
-            });
-        };
-    };
-
-    function handleOutboundLinkClicks(href) {
-        ga('send', 'event', {
-            eventCategory: 'Outbound Link',
-            eventAction: 'Click',
-            eventLabel: href.trim(),
-            transport: 'beacon'
-        });
-    }
-
-    $('.external').on('click', function () {
-        handleOutboundLinkClicks($(this).attr('href'));
-    });
-
-    $('.the-header .nav-link a, [class$=wrapper] .results a').on('click', function () {
-        sendGaEvent('Blog', 'Navigate', this.textContent);
-    });
-    $('.the-header .nav-link button').on('click', function () {
-        sendGaEvent('Blog', 'Navigate', this.getAttribute('data-ga'));
-    });
-    $('.the-footer .about h4 a').on('click', function () {
-        sendGaEvent('Blog', 'Go to About');
-    });
-    $('.tag_box.categories a').on('click', function () {
-        sendGaEvent('Blog', 'Click Category', this.title);
-    });
-    $('.tag_box.tags a').on('click', function () {
-        sendGaEvent('Blog', 'Click Tag', this.title);
-    });
-    $('.unit-article .comments .show-hidden').on('click', function () {
-        sendGaEvent('Post', 'Show Comments', this.textContent);
-    });
-    $('a.internal').on('click', function () {
-        label = (this.getAttribute('data-ga') !== null)
-            ? this.getAttribute('data-ga')
-            : this.textContent;
-        sendGaEvent('Post', 'Navigate', label);
-    });
-    $('.unit-article .meta .author').on('click', function () {
-        sendGaEvent('Post', 'Show Author');
-    });
-    $('.unit-article .meta .license').on('click', function () {
-        sendGaEvent('Post', 'Show License');
-    });
-    $('.unit-article .meta .list-tag a').on('click', function () {
-        if (this.getAttribute('data-ga') !== null) {
-            sendGaEvent('Post', 'Click Tag', this.getAttribute('data-ga'));
-        }
-    });
-    $('.unit-article .meta .list-category a').on('click', function () {
-        if (this.getAttribute('data-ga') !== null) {
-            sendGaEvent('Post', 'Click Category', this.getAttribute('data-ga'));
-        }
-    });
-    $('.addthis_toolbox .btn-share-post').on('click', function () {
-        sendGaEvent('Post', 'Share Post', this.attr('title'));
-    });
+$(document).on('click', 'a.internal', function(event) {
+    GoogleAnalyticsHelpers.sendEvent('Blog', 'Navigate', event.currentTarget);
+});
+$('.the-header').on('click', '.nav-link a, [class$=wrapper] .results a, .nav-link button', function(event) {
+    GoogleAnalyticsHelpers.sendEvent('Blog', 'Navigate', event.currentTarget);
+});
+$('.the-header').on('click', '.nav-link button', function(event) {
+    GoogleAnalyticsHelpers.sendEvent('Blog', 'Navigate', event.currentTarget);
+});
+$('.the-footer').on('click', '.about h4 a', function(event) {
+    GoogleAnalyticsHelpers.sendEvent('Blog', 'Go to About', event.currentTarget);
+});
+$('.the-footer').on('click', '.social-links a', function(event) {
+    GoogleAnalyticsHelpers.sendEvent('Blog', 'Click Social Link', event.currentTarget);
+});
+$('.unit-article').on('click', '.tag_box.categories a', function(event) {
+    GoogleAnalyticsHelpers.sendEvent('Blog', 'Click Category', event.currentTarget);
+});
+$('.unit-article').on('click', '.tag_box.tags a', function(event) {
+    GoogleAnalyticsHelpers.sendEvent('Blog', 'Click Tag', event.currentTarget);
+});
+$('.unit-article').on('click', '.comments .show-hidden', function(event) {
+    GoogleAnalyticsHelpers.sendEvent('Post', 'Show Comments', event.currentTarget);
+});
+$('.unit-article').on('click', '.meta .author', function(event) {
+    GoogleAnalyticsHelpers.sendEvent('Post', 'Show Author', event.currentTarget);
+});
+$('.unit-article').on('click', '.meta .license-icon', function(event) {
+    GoogleAnalyticsHelpers.sendEvent('Post', 'Show License', event.currentTarget);
+});
+$('.unit-article').on('click', '.meta .list-tag a', function(event) {
+    GoogleAnalyticsHelpers.sendEvent('Post', 'Click Tag', event.currentTarget);
+});
+$('.unit-article').on('click', '.meta .list-category', function(event) {
+    GoogleAnalyticsHelpers.sendEvent('Post', 'Click Category', event.currentTarget);
+});
+$('.unit-article').on('click', '.addthis_toolbox .btn-share-post', function(event) {
+    GoogleAnalyticsHelpers.sendEvent('Post', 'Share Post', event.currentTarget);
 });
 </script>
 {% endif %}

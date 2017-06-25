@@ -19,8 +19,12 @@ layout: blog
                             <time itemprop="datePublished" class="date-pub {% if page.last_updated == null %}updated{% endif %}"
                                 title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B' }} {{ page.date | date: '%d' }}, {{ page.date | date: '%Y' }} </time>
                             by
-                            <a class="author" href="/" rel="author"><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{% if page.author == null %}{{ site.author.name }}{% else %}{{ page.author }}{% endif %}</span></span></a>
-                            <a class="license-icon" rel="license" href="{{ site.blog.cc_license }}" target="_blank">
+                            <a class="author" href="/" rel="author" title="{{ site.data.i18n[site.lang].show_author }}">
+                                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                                    <span itemprop="name">{% if page.author == null %}{{ site.author.name }}{% else %}{{ page.author }}{% endif %}</span>
+                                </span>
+                            </a>
+                            <a class="license-icon" rel="license" href="{{ site.blog.cc_license }}" target="_blank" title="{{ site.data.i18n[site.lang].show_license }}">
                                     <img alt="Creative Commons Licence" style="border-width:0" src="{{ site.blog.cc_license_image | relative_url }}"  height="16" width="80"/>
                                 </a> {% if page.last_updated %} ({{ site.data.i18n[site.lang].last_updated
                             }}:
@@ -43,17 +47,17 @@ layout: blog
             <footer class="unit-foot">
                 <div class="unit-inner unit-foot-inner">
                     <div class="gotop">
-                        <a class="internal" href="#page">{{ site.data.i18n[site.lang].back_to_top }}</a>
+                        <a class="internal" href="#page" title="{{ site.data.i18n[site.lang].back_to_top }}">{{ site.data.i18n[site.lang].back_to_top }}</a>
                         {% if site.addthis_public_id %}
                             {% include common/addthis.html %}
                         {% endif %}
                     </div>
                     <nav class="pagination">
                         {% if page.previous %}
-                            <a class="internal" data-ga="Previous Post" rel="prev" href="{{ page.previous.url | relative_url }}" title="{{ site.data.i18n[site.lang].view }} '{{ page.previous.title }}'"> ← {{ page.previous.title }}</a>
+                            <a class="internal" rel="prev" href="{{ page.previous.url | relative_url }}" title="{{ site.data.i18n[site.lang].previous_post }} '{{ page.previous.title }}'"> ← {{ page.previous.title }}</a>
                         {% endif %}
                         {% if page.next %}
-                            <a class="internal" data-ga="Next Post" rel="next" href="{{ page.next.url | relative_url }}" title="{{ site.data.i18n[site.lang].view }} '{{ page.next.title }}'">{{ page.next.title }} → </a>
+                            <a class="internal" rel="next" href="{{ page.next.url | relative_url }}" title="{{ site.data.i18n[site.lang].next_post }} '{{ page.next.title }}'">{{ page.next.title }} → </a>
                         {% endif %}
                     </nav>
                 </div>
@@ -62,7 +66,7 @@ layout: blog
                 {% if site.disqus.shortname and page.comments != false %}
                     {% include common/disqus.html %}
                     <div class="comments">
-                        <button class="center-block show-hidden" data-ga="Show Comments" data-disqus-url="{{ page.url | absolute_url }}">{{ site.data.i18n[site.lang].show_comments }}</button>
+                        <button class="center-block show-hidden" title="{{ site.data.i18n[site.lang].show_comments }}" data-disqus-url="{{ page.url | absolute_url }}">{{ site.data.i18n[site.lang].show_comments }}</button>
                         <div id="disqus_thread"></div>
                     </div>
                 {% endif %}

@@ -37,16 +37,8 @@
 
 {% if site.google_analytics %}
 <script>
-    $("[class^='btn']").on('click', function () {
-        var label = this.textContent;
-        if (this.title !== '') {
-            label = this.title;
-        }
-        if (this.getAttribute('data-ga') !== null) {
-            label = this.getAttribute('data-ga');
-        }
-        ga('send', 'event', 'Homepage Links', 'Click', label.trim());
-    });
-
+$(document).on('click', '[class^="btn"]', function(event) {
+    GoogleAnalyticsHelpers.sendEvent('Home', 'Click', event.currentTarget);
+});
 </script>
 {% endif %}
