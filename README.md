@@ -74,7 +74,7 @@ i.e. `jekyllapp` in this example.
    ```ruby
    source "https://rubygems.org"
 
-   gem 'jekyll'
+   gem 'jekyll', '= 3.4.4' # locked in for now due to a bug in jekyll 3.5.0
 
    group :jekyll_plugins do
      gem 'jekyll-feed'

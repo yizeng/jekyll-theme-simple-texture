@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem 'jekyll'
+gem 'jekyll', '= 3.4.4' # locked in for now due to a bug in jekyll 3.5.0
 gem 'jekyll-theme-simple-texture'
 
 group :jekyll_plugins do
