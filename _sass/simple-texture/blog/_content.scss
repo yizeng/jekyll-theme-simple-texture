@@ -464,12 +464,14 @@
                         transition-duration: .2s;
                 vertical-align: bottom;
 
+                color: $color-text;
                 border: 1px solid $color-text;
                 background-color: $color-inline-code-background;
                 background-clip: padding-box;
                 text-shadow: 0 -1px 0 rgba(255, 255, 255, .2);
 
                 &:hover {
+                    color: $color-text;
                     border: 1px solid $color-text;
                     background-color: $color-hover;
 
@@ -705,7 +707,7 @@
             }
         }
 
-        .gotop {
+        .post-buttons {
             margin-bottom: 18px;
 
             .addthis_toolbox {
