@@ -11,12 +11,12 @@
                 </div>
                 <div class="social-links">
                     {% if site.author.email %}
-                        <a class="external ico-gmail" href="mailto:{{ site.author.email }}" rel="me" target="_blank" title="email"></a>
+                        <a class="ico-gmail" href="mailto:{{ site.author.email }}" rel="me" target="_blank" title="email"></a>
                     {% endif %}
-                    <a class="external ico-rss" href="{{ "/feed.xml" | relative_url }}" rel="me" target="_blank" title="feed"></a>
+                    <a class="ico-rss" href="{{ "/feed.xml" | relative_url }}" rel="me" target="_blank" title="feed"></a>
                     {% for link in site.author.social_links %}
                         {% if link.url %}
-                            <a class="external ico-{{ link.name }}" href="{{ link.url }}" rel="me" target="_blank" title="{{ link.name }}"></a>
+                            <a class="ico-{{ link.name }}" href="{{ link.url }}" rel="me" target="_blank" title="{{ link.name }}"></a>
                         {% endif %}
                     {% endfor %}
                 </div>

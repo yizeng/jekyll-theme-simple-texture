@@ -37,8 +37,8 @@
 
 {% if site.google_analytics %}
 <script>
-$(document).on('click', '[class^="btn"]', function(event) {
-    GoogleAnalyticsHelpers.sendEvent('Home', 'Click', event.currentTarget);
+$(document).on('click', '[class*="btn"]', function(event) {
+    sendGaEvent('Home', 'Click', event.currentTarget);
 });
 </script>
 {% endif %}

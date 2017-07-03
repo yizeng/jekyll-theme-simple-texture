@@ -1,6 +1,7 @@
 <script async src="https://www.google-analytics.com/analytics.js"></script>
 <script async src="{{ site.baseurl }}/assets/javascripts/autotrack.js"></script>
 <script>
+
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 ga('create', '{{ site.google_analytics }}', 'auto');
 
@@ -47,19 +48,16 @@ ga('require', 'pageVisibilityTracker', {
 
 ga('send', 'pageview');
 
-var GoogleAnalyticsHelpers;
-(function (GoogleAnalyticsHelpers) {
-    function sendEvent(category, action, element, value) {
-        var title = element.getAttribute('title') ? element.getAttribute('title') : '';
-        var label = title.length === 0 ? element.textContent.trim() : title;
-        ga('send', {
-            hitType: 'event',
-            eventCategory: category,
-            eventAction: action.trim(),
-            eventLabel: label ? label : null,
-            eventValue: value ? value : null
-        });
-    }
-    GoogleAnalyticsHelpers.sendEvent = sendEvent;
-})(GoogleAnalyticsHelpers || (GoogleAnalyticsHelpers = {}));
+function sendGaEvent(category, action, element, value) {
+    var title = element.getAttribute('title');
+    var textConent = element.textContent ? element.textContent.trim() : undefined;
+    var label = (title && title.length !== 0) ? title : textConent;
+    ga('send', {
+        hitType: 'event',
+        eventCategory: category,
+        eventAction: action.trim(),
+        eventLabel: label,
+        eventValue: value
+    });
+}
 </script>

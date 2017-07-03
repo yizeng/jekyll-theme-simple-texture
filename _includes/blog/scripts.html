@@ -25,7 +25,8 @@ $(document).ready(function () {
         }
     });
 
-    $('footer .back-to-top, .gotop a').on('click', function (event) {
+    $('footer .back-to-top, .gotop').on('click', function (event) {
+        sendGaEvent('Blog', 'Back to Top', event.currentTarget);
         event.preventDefault();
         $('html, body').animate({
             scrollTop: 0
@@ -34,6 +35,7 @@ $(document).ready(function () {
     });
 
     $('.show-hidden').on('click', function () {
+        sendGaEvent('Post', 'Show Hidden', event.currentTarget);
         $(this).parent().next().toggleClass("hidden");
         $(this).toggleClass("hidden");
     });
@@ -44,43 +46,49 @@ $(document).ready(function () {
 {% if site.google_analytics %}
 <script>
 $(document).on('click', 'a.internal', function(event) {
-    GoogleAnalyticsHelpers.sendEvent('Blog', 'Navigate', event.currentTarget);
+    sendGaEvent('Blog', 'Navigate', event.currentTarget);
 });
 $('.the-header').on('click', '.nav-link a, [class$=wrapper] .results a, .nav-link button', function(event) {
-    GoogleAnalyticsHelpers.sendEvent('Blog', 'Navigate', event.currentTarget);
+    sendGaEvent('Blog', 'Navigate', event.currentTarget);
 });
 $('.the-header').on('click', '.nav-link button', function(event) {
-    GoogleAnalyticsHelpers.sendEvent('Blog', 'Navigate', event.currentTarget);
+    sendGaEvent('Blog', 'Navigate', event.currentTarget);
 });
 $('.the-footer').on('click', '.about h4 a', function(event) {
-    GoogleAnalyticsHelpers.sendEvent('Blog', 'Go to About', event.currentTarget);
+    sendGaEvent('Blog', 'Go to About', event.currentTarget);
 });
 $('.the-footer').on('click', '.social-links a', function(event) {
-    GoogleAnalyticsHelpers.sendEvent('Blog', 'Click Social Link', event.currentTarget);
+    sendGaEvent('Blog', 'Click Social Link', event.currentTarget);
 });
 $('.unit-article').on('click', '.tag_box.categories a', function(event) {
-    GoogleAnalyticsHelpers.sendEvent('Blog', 'Click Category', event.currentTarget);
+    sendGaEvent('Blog', 'Click Category', event.currentTarget);
 });
 $('.unit-article').on('click', '.tag_box.tags a', function(event) {
-    GoogleAnalyticsHelpers.sendEvent('Blog', 'Click Tag', event.currentTarget);
+    sendGaEvent('Blog', 'Click Tag', event.currentTarget);
 });
 $('.unit-article').on('click', '.comments .show-hidden', function(event) {
-    GoogleAnalyticsHelpers.sendEvent('Post', 'Show Comments', event.currentTarget);
+    sendGaEvent('Post', 'Show Comments', event.currentTarget);
 });
 $('.unit-article').on('click', '.meta .author', function(event) {
-    GoogleAnalyticsHelpers.sendEvent('Post', 'Show Author', event.currentTarget);
+    sendGaEvent('Post', 'Show Author', event.currentTarget);
 });
 $('.unit-article').on('click', '.meta .license-icon', function(event) {
-    GoogleAnalyticsHelpers.sendEvent('Post', 'Show License', event.currentTarget);
+    sendGaEvent('Post', 'Show License', event.currentTarget);
 });
 $('.unit-article').on('click', '.meta .list-tag a', function(event) {
-    GoogleAnalyticsHelpers.sendEvent('Post', 'Click Tag', event.currentTarget);
+    sendGaEvent('Post', 'Click Tag', event.currentTarget);
 });
 $('.unit-article').on('click', '.meta .list-category', function(event) {
-    GoogleAnalyticsHelpers.sendEvent('Post', 'Click Category', event.currentTarget);
+    sendGaEvent('Post', 'Click Category', event.currentTarget);
 });
-$('.unit-article').on('click', '.addthis_toolbox .btn-share-post', function(event) {
-    GoogleAnalyticsHelpers.sendEvent('Post', 'Share Post', event.currentTarget);
+$('.unit-foot').delegate('.addthis_toolbox .btn-share-post', 'click', function(event) {
+    sendGaEvent('Post', 'Share Post', event.currentTarget);
+});
+$('.search-wrapper').on('click', '.results a', function(event) {
+    sendGaEvent('Search', 'Click Search Result', event.currentTarget);
+});
+$('.search-wrapper').on('click', '.btn-close', function(event) {
+    sendGaEvent('Search', 'Close Search', event.currentTarget);
 });
 </script>
 {% endif %}
