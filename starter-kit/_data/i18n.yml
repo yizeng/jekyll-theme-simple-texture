@@ -1,4 +1,4 @@
-en:
+en: &en
   about: 'About'
   articles: 'Articles'
   back_to_top: 'Back to Top'
@@ -27,7 +27,17 @@ en:
   show_license: 'Show License'
   tags: 'Tags'
   view: 'View'
-cn:
+en-us:
+  <<: *en
+en-gb:
+  <<: *en
+en-au:
+  <<: *en
+en-ca:
+  <<: *en
+en-nz:
+  <<: *en
+zh: &zh
   about: '关于'
   articles: '文章列表'
   back_to_top: '返回顶部'
@@ -57,3 +67,9 @@ cn:
   show_license: '显示许可证'
   tags: '文章标签'
   view: '查阅'
+zh-cn:
+  <<: *zh
+zh-hk:
+  <<: *zh # Not Properly Translated Yet.
+zh-tw:
+  <<: *zh # Not Properly Translated Yet.
