@@ -24,11 +24,15 @@ layout: blog
                                     <span itemprop="name">{% if page.author == null %}{{ site.author.name }}{% else %}{{ page.author }}{% endif %}</span>
                                 </span>
                             </a>
-                            <a class="license-icon" rel="license" href="{{ site.blog.cc_license }}" target="_blank" title="{{ site.data.i18n[site.lang].show_license }}">
+                            {% if site.blog.cc_license and site.blog.cc_license_image %}
+                                <a class="license-icon" rel="license" href="{{ site.blog.cc_license }}" target="_blank" title="{{ site.data.i18n[site.lang].show_license }}">
                                     <img alt="Creative Commons Licence" style="border-width:0" src="{{ site.blog.cc_license_image | relative_url }}"  height="16" width="80"/>
-                                </a> {% if page.last_updated %} ({{ site.data.i18n[site.lang].last_updated
-                            }}:
-                            <time class="date-updated updated" title="{{ page.last_updated | date_to_xmlschema }}" datetime="{{ page.last_updated | date_to_xmlschema }}">{{ page.last_updated }}</time>) {% endif %}
+                                </a>
+                            {% endif %}
+                            {% if page.last_updated %}
+                                ({{ site.data.i18n[site.lang].last_updated}}:
+                                <time class="date-updated updated" title="{{ page.last_updated | date_to_xmlschema }}" datetime="{{ page.last_updated | date_to_xmlschema }}">{{ page.last_updated }}</time>)
+                            {% endif %}
                         </p>
                         <ul class="list-category list-linear">
                             <li class="list-head">{{ site.data.i18n[site.lang].categories }}: </li>
