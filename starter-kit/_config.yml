@@ -6,7 +6,7 @@ permalink: /blog/:year/:month/:day/:title/
 theme: jekyll-theme-simple-texture
 
 whitelist: [jekyll-feed, jekyll-redirect-from, jekyll-seo-tag, jekyll-sitemap]
-plugins:
+gems:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-seo-tag
