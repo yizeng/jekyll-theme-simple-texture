@@ -74,7 +74,7 @@ i.e. `jekyllapp` in this example.
    ```ruby
    source "https://rubygems.org"
 
-   gem 'jekyll', '= 3.5.1' # locked in for stability.
+   gem 'jekyll', '= 3.4.5' # locked in to be consistent GitHub Pages.
 
    group :jekyll_plugins do
      gem 'jekyll-feed'
