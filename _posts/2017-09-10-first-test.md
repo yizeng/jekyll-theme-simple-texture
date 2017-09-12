@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "A quick demo of Simple Texture theme's code highlighting features"
-description: "A quick demo of Simple Texture theme's code highlighting features"
+title: "first test"
+description: "first test"
 categories: [demo]
 tags: [demo, jekyll]
 redirect_from:
-  - /2017/05/27/
+  - /2017/09/10/
 ---
 
 > This is code blocks and highlighting test page for [Simple Texture][Simple Texture] theme.
