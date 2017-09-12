@@ -5,7 +5,7 @@ en: &en
   categories: 'Categories'
   close: 'Close'
   copyright: '<p><small>Theme <a href="https://github.com/yizeng/jekyll-theme-simple-texture" target="_blank">Simple Texture</a> developed by <a href="http://yizeng.me" target="_blank">Yi Zeng</a>, powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>.</small></p>'
-  enter_blog: 'Enter Blog'
+  enter_blog: 'Welcome Blog'
   last_updated: 'Last updated'
   menu: 'Menu'
   more: 'More'
