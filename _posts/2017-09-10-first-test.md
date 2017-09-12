@@ -46,7 +46,8 @@ end
 
 ## External Gist
 
-<script src="https://gist.github.com/yizeng/9b871ad619e6dcdcc0545cac3101f361.js"></script>
+<script src="https://gist.github.com/yizeng/9b871ad619e6dcdcc0545cac3101f361.js">
+</script>
 
 ## Simple Highlight
 
@@ -55,7 +56,6 @@ def fooss
   puts 'foo'
 end
 {% endhighlight %}
-<iframe width = "500" height ="500"></iframe>
 
 ## Highlight with long lines
 
