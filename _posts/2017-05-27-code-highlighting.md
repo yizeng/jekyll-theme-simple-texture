@@ -51,8 +51,8 @@ end
 ## Simple Highlight
 
 {% highlight ruby %}
-def foo
-  puts 'foo'
+def fooss
+  puts 'fooss'
 end
 {% endhighlight %}
 
