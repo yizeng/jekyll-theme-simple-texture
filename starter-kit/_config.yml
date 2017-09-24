@@ -52,9 +52,9 @@ home:
   section2: <h2>A gem-based responsive simple texture styled Jekyll theme</h2>
   section3: <div class="social-links"><a class="ico-github btn" href="https://github.com/yizeng/jekyll-theme-simple-texture" title="View on GitHub"></a></div>
 blog:
-  cc_license: # A link to CC License of your choice, e.g. http://creativecommons.org/licenses/by-sa/4.0/.
-  cc_license_image: # An image of your CC License, e.g. /assets/images/theme/cc-by-sa.png
-  footer_content: A gem-based responsive simple texture styled Jekyll theme.
+  cc_license: http://creativecommons.org/licenses/by-sa/4.0/ # A link to CC License of your choice.
+  cc_license_image: /assets/images/theme/cc-by-sa.png # An image of your CC License. 
+  footer_content: A gem-based responsive simple texture styled <a href="http://jekyllrb.com/">Jekyll</a> theme.
 
 disqus:
   shortname:
