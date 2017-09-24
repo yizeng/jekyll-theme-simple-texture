@@ -5,7 +5,7 @@ lang: en # Language code as defined in _data/i18n.yml. en, en-gb, en-us, zh, zh-
 permalink: /blog/:year/:month/:day/:title/
 
 whitelist: [jekyll-feed, jekyll-redirect-from, jekyll-seo-tag, jekyll-sitemap]
-gems:
+plugins:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-seo-tag
