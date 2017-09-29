@@ -26,7 +26,6 @@ $(document).ready(function () {
     });
 
     $('footer .back-to-top, .gotop').on('click', function (event) {
-        sendGaEvent('Blog', 'Back to Top', event.currentTarget);
         event.preventDefault();
         $('html, body').animate({
             scrollTop: 0
@@ -35,7 +34,6 @@ $(document).ready(function () {
     });
 
     $('.show-hidden').on('click', function () {
-        sendGaEvent('Post', 'Show Hidden', event.currentTarget);
         $(this).parent().next().toggleClass("hidden");
         $(this).toggleClass("hidden");
     });
@@ -45,6 +43,12 @@ $(document).ready(function () {
 <!-- Google Analytics Event tracking -->
 {% if site.google_analytics %}
 <script>
+$(document).on('click', 'footer .back-to-top, .gotop', function (event) {
+    sendGaEvent('Blog', 'Back to Top', event.currentTarget);
+});
+$(document).on('click', '.show-hidden', function (event) {
+    sendGaEvent('Post', 'Show Hidden', event.currentTarget);
+});
 $(document).on('click', 'a.internal', function(event) {
     sendGaEvent('Blog', 'Navigate', event.currentTarget);
 });
