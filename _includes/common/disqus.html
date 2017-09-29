@@ -6,7 +6,7 @@
 
         $.ajax({
             type: 'GET',
-            url: 'https://disqus.com/api/3.0/threads/set.jsonp',
+            url: '//disqus.com/api/3.0/threads/set.jsonp',
             data: {
                 api_key: disqusPublicKey,
                 forum: disqusShortname,
@@ -24,7 +24,7 @@
 
         $('.comments .show-hidden').on('click', function () {
             $.ajaxSetup({cache: true});
-            $.getScript('http://' + disqusShortname + '.disqus.com/embed.js');
+            $.getScript('//' + disqusShortname + '.disqus.com/embed.js');
             $.ajaxSetup({cache: false});
             $(this).remove();
         });
