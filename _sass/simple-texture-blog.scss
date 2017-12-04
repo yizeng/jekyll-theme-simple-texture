@@ -97,6 +97,12 @@ textarea {
     font-family: $fonts-body;
 }
 
+img.img-post {
+    display: block;
+    margin: auto;
+    width: 90%;
+}
+
 @import 'simple-texture/blog/overlay';
 @import 'simple-texture/blog/header';
 @import 'simple-texture/blog/footer';
