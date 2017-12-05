@@ -2,8 +2,8 @@
 layout: post
 title: "Motorcycle Clubs Outreach"
 description: "Clothes collected and distributed by Motorcycle Clubs."
-categories: [organization]
-tags: [ministry]
+categories: [events]
+tags:
 ---
 Solutions motorcycle club and Gypsy Jokers of Salem partnered with Be Bold to
 collect and distribute much needed warm clothing and blankets.
