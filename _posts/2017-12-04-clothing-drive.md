@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Motorcycle Clubs Outreach"
+title: "Clothing Drive"
 description: "Clothes collected and distributed by Motorcycle Clubs."
 categories: [events]
 tags:
