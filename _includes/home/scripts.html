@@ -2,8 +2,8 @@
 <script src="{{ site.baseurl }}/assets/javascripts/jquery.easing.min.js"></script>
 <script>
     $(document).ready(function () {
-        $.fn.fullpage({
-            anchors: ['bio', 'social'],
+        $("#fullpage").fullpage({
+            anchors: ['bio', 'outreach', 'store', 'support'],
             css3: true,
             fixedElements: '.site-notice',
             menu: '#menu',
@@ -34,11 +34,3 @@
     });
 
 </script>
-
-{% if site.google_analytics %}
-<script>
-$(document).on('click', '[class*="btn"]', function(event) {
-    sendGaEvent('Home', 'Click', event.currentTarget);
-});
-</script>
-{% endif %}

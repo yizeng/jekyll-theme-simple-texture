@@ -15,6 +15,10 @@ body {
     color: #c4c4c4;
 }
 
+span {
+  color: #404040;
+}
+
 h1 {
     font-size: 5em;
 
@@ -43,6 +47,10 @@ a:hover,
 a:link,
 a:visited {
     text-decoration: none;
+
+}
+a:hover {
+  color: #808080;
 }
 
 button,
@@ -87,7 +95,7 @@ textarea {
     background: url('../images/theme/noisy_texture_section1-200x200.png') repeat 0 0 #080808;
 }
 
-#section1 {
+#section1, #section2, #section3 {
     background: url('../images/theme/noisy_texture_section0-200x200.png') repeat 0 0 #F0F0F0;
 }
 

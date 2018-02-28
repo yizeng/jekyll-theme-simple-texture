@@ -1,15 +1,9 @@
 ---
 ---
-@import 'simple-texture-home';
-body {
-  font: 14px/20px Arial,sans-serif;
-  color:#222;
-}
 
 @media only screen and (min-width: 640px)
 {
   .cust-quotes {
-    width: 640px;
     height:100px;
     position:relative;
     margin-top: 100px;
@@ -20,11 +14,16 @@ body {
     width:940px;
 
   }
+  div.support{
+    width:940px;
+  }
+
 }
 
 @media only screen and (max-width: 640px)
 {
   .cust-quotes {
+    display:none;
     position:relative;
     margin-top: 310px;
     margin-bottom: 60px;
@@ -36,6 +35,11 @@ body {
   div.giving-footer {
     padding:10px
   }
+}
+div.support {
+  color: #404040;
+
+  margin:0 auto;
 }
 
 div.giving-footer {

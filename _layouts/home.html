@@ -8,17 +8,19 @@
 <!--<![endif]-->
 
 <head>
+
+    <link rel="stylesheet" href="assets/stylesheets/foundation.css">
+    <link rel="stylesheet" href="assets/stylesheets/app.css">
     {% include common/meta.html %}
     <link href='{{ site.baseurl }}/assets/stylesheets/home.css' rel="stylesheet" type="text/css">
+    <link href='{{ site.baseurl }}/assets/stylesheets/give.css' rel="stylesheet" type="text/css">
     {% include common/libraries.html %}
+    <script src="/assets/javascripts/quotes.js"></script>
 </head>
 
 <body>
-    <ul id="menu">
-        <li data-menuanchor="home"><a href="#home">Heading</a></li>
-        <li data-menuanchor="events"><a href="#events">Events</a></li>
-    </ul>
 
+<div id ="fullpage" class="fullpage-wrapper">
     <div id="section0" class="section" data-name="home">
 
         {% include common/notices.html %}
@@ -28,20 +30,58 @@
             {% if site.home.section2 %}{{ site.home.section2 }}{% endif %}
             {% if site.home.section3 %}{{ site.home.section3 }}{% endif %}
         </div>
+        <nav class="hover-underline-menu" data-menu-underline-from-center>
+        <ul class="menu align-center">
+          <li><a href="#outreach">Outreach</a></li>
+          <li><a href="#store">Store</a></li>
+          <li><a href="#support">Support</a></li>
+        </ul>
+
         <a class="btn-continue animated bounce" title="{{ site.data.i18n[site.lang].more }}" href="#social"></a>
     </div>
 
     <div id="section1" class="section" data-name="events">
+
         <h1 class="animated hidden main-links">
             <a class="btn-enter btn-dark" title="{{ site.data.i18n[site.lang].enter_blog }}" href="{{ site.paths.blog | relative_url }}">{{ site.data.i18n[site.lang].enter_blog }}</a>
         </h1>
-        <h1 class="animated hidden main-links">
-            <a class="btn-enter btn-dark" title="Support" href="/give">Support</a>
-        </h1>
-        <div class=" animated main-links">
-          <a href="https://www.facebook.com/BeBoldStreetMinistry/"><img src="/assets/images/theme/facebook.jpg"></a>
-        </div>
+        <p>
+        <span>Check out what we are doing in Salem to minister to those in need</span>
+      </p>
+        <a href="https://www.facebook.com/BeBoldStreetMinistry">
+          <img src="/assets/images/theme/facebook-connect.png">
+        </a>
+
     </div>
+    <div id="section2" class="section" data-name="events">
+
+        <h1>Store</h1>
+        <p><span>Purchase clothing that makes a difference.  Proceeds go to feeding,
+          clothing, and transitioning homeless.</span></p>
+
+    </div>
+    <div id="section3" class="section" data-name="events">
+
+        <h1>Support</h1>
+        <section id="testimonials">
+        <div class="cust-quotes">
+          {% for quote in page.quotes %}
+            <blockquote data-timeout="4800"><p>{{quote.text}}</p><cite>{{quote.verse}}</cite></blockquote>
+          {% endfor %}
+        </div>
+      </section>
+      <div class="support"><p>If you feel directed to support this ministry, contact <a href="mailto:beboldstreetministires@gmail.com">beboldstreetministries@gmail.com</a> to find out how.</p>
+      <p>As a fully non-profit Christian organization we are
+        supported by people's generosity.  People just like you make the difference in our community.
+        We meet the needs of the desperate and homeless with the hope of a risen Savior.</p>
+        <p>If that sounds like something you want to spend your time or treasure on,
+          reach out to us.</p></div>
+
+    </div>
+
+</div>
+
+
 
     {% include home/scripts.html %}
 </body>
