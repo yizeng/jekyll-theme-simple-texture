@@ -32,3 +32,10 @@
   right: 0;
   transition: all 0.5s ease;
 }
+.rem75 {
+  max-width: 75rem;
+  margin:auto;
+}
+.cell-padd {
+  padding:5px;
+}
