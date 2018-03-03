@@ -1,0 +1,29 @@
+- name: Sweatshirt
+  price: $50
+  description: Be Bold Street Ministries Black sweatshirt with white text.
+  image: https://placehold.it/180x180
+
+- name: Racer-T
+  price: $15
+  description: Grey woman's Tee with narrow cut back.
+  image: https://placehold.it/180x180
+
+- name: TODO
+  price: $
+  description: TODO
+  image: https://placehold.it/180x180
+
+- name: TODO
+  price: $
+  description: TODO
+  image: https://placehold.it/180x180
+
+- name: TODO
+  price: $
+  description: TODO
+  image: https://placehold.it/180x180
+
+- name: TODO
+  price: $
+  description: TODO
+  image: https://placehold.it/180x180

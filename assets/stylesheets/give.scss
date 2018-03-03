@@ -1,0 +1,112 @@
+---
+---
+
+@media only screen and (min-width: 640px)
+{
+  .cust-quotes {
+    height:100px;
+    position:relative;
+    margin-top: 100px;
+    margin-bottom: 60px;
+  }
+  #testimonials {
+    margin:0 auto;
+    width:940px;
+
+  }
+  div.support{
+    width:940px;
+  }
+
+}
+
+@media only screen and (max-width: 640px)
+{
+  .cust-quotes {
+    display:none;
+    position:relative;
+    margin-top: 310px;
+    margin-bottom: 60px;
+  }
+  #testimonials {
+    padding:10px;
+    margin:0 auto;
+  }
+  div.giving-footer {
+    padding:10px
+  }
+}
+div.support {
+  color: #404040;
+
+  margin:0 auto;
+}
+
+div.giving-footer {
+  max-width:940px;
+  margin:0 auto;
+}
+
+p.giving {
+  font-size: 1.1em;
+}
+
+.cust-quotes blockquote {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.5s ease-out 0s, transform 0.5s ease-in 0s;
+}
+
+/* IE < 10 fallback */
+.no-csstransitions .cust-quotes blockquote,
+.no-csstransforms .cust-quotes blockquote {
+   position:relative;
+}
+
+.cust-quotes blockquote:first-child {
+    opacity: 0;
+    transform: translateY(-10px) scale(1.1);
+}
+.cust-quotes blockquote:first-child + blockquote {
+    opacity: 1;
+    z-index: 1;
+    transition: opacity 1.6s ease 0s;
+}
+.cust-quotes blockquote p{
+  font-size:24px;
+  font-weight:normal;
+  font-style:italic;
+  color:#353535;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.cust-quotes blockquote p:before {
+   content: '\201C';
+}
+.cust-quotes blockquote p:after {
+   content: '\201D';
+}
+.cust-quotes blockquote cite {
+    text-align: center;
+    font-size: 14px;
+    color: #898989;
+}
+.cust-quotes blockquote cite a {
+  font-size:14px;
+  font-weight:normal;
+}
+
+
+
+.container {
+
+max-width:940px;
+margin:0 auto;
+
+}

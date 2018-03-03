@@ -4,11 +4,11 @@ en: &en
   back_to_top: 'Back to Top'
   categories: 'Categories'
   close: 'Close'
-  enter_blog: 'Enter Blog'
+  enter_blog: "Our Events"
   last_updated: 'Last updated'
   menu: 'Menu'
   more: 'More'
-  next_post: 'Next Post'
+  next_post: 'Next Event'
   notice_no_js: 'This site requires JavaScript. Here are the instructions <a href="http://www.enable-javascript.com/" target="_blank">how to enable JavaScript in your web browser</a>.'
   notice_old_ie: 'You are using an outdated browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" target="_blank">activate Google Chrome Frame</a> to improve your experience.'
   page_404_content: 'You will be redirected to <a href="/">homepage</a> in few seconds.'

@@ -6,19 +6,28 @@
 @import 'simple-texture/common/pace';
 @import 'simple-texture/common/social-icons';
 @import 'simple-texture/home/fullpage';
+@import 'simple-texture/product/display-card';
 
 body {
     font-family: $fonts-body;
     font-size: 18px;
     line-height: 36px;
 
-    color: $color-text-dark;
+    color: #c4c4c4;
+}
+
+span {
+  color: #404040;
 }
 
 h1 {
     font-size: 5em;
 
     text-transform: uppercase;
+}
+
+h1.main-links {
+  margin-bottom: 100px;
 }
 
 h2 {
@@ -39,6 +48,10 @@ a:hover,
 a:link,
 a:visited {
     text-decoration: none;
+
+}
+a:hover {
+  color: #808080;
 }
 
 button,
@@ -80,11 +93,11 @@ textarea {
 }
 
 #section0 {
-    background: url('../images/theme/noisy_texture_section0-200x200.png') repeat 0 0 #F0F0F0;
+    background: url('../images/theme/noisy_texture_section1-200x200.png') repeat 0 0 #080808;
 }
 
-#section1 {
-    background: url('../images/theme/noisy_texture_section1-200x200.png') repeat 0 0 #150E1F;
+#section1, #section2, #section3 {
+    background: url('../images/theme/noisy_texture_section0-200x200.png') repeat 0 0 #F0F0F0;
 }
 
 #fullPage-nav {

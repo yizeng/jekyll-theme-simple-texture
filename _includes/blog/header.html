@@ -4,17 +4,9 @@
             <nav class="nav-global">
                 <ul>
                     <li class="logo nav-link">
-                        <button class="btn-menu" title="{{ site.data.i18n[site.lang].menu }}"></button>
                         <a href="{{ site.paths.blog | relative_url }}">{{ site.title }}</a>
-                        <!--[if !IE]> -->
-                        <button class="btn-search" title="{{ site.data.i18n[site.lang].search }}"></button>
-                        <!-- <![endif]-->
                     </li>
-                    <li class="nav-link"><a title="{{ site.data.i18n[site.lang].categories }}" href="{{ site.paths.categories | relative_url }}">{{ site.data.i18n[site.lang].categories }}</a></li>
-                    <li class="nav-link"><a title="{{ site.data.i18n[site.lang].tags }}" href="{{ site.paths.tags | relative_url }}">{{ site.data.i18n[site.lang].tags }}</a></li>
-                    <!--[if !IE]> -->
-                    <li class="nav-link"><a title="{{ site.data.i18n[site.lang].search }}" class="btn-search" href="#">{{ site.data.i18n[site.lang].search }}</a></li>
-                    <!-- <![endif]-->
+                    
                 </ul>
             </nav>
         </div>

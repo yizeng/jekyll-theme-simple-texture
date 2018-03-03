@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="{{ site.lang }}">
+<!--<![endif]-->
+
+<head>
+    {% include common/meta.html %}
+    <link href='{{ site.baseurl }}/assets/stylesheets/give.css' rel="stylesheet" type="text/css">
+    {% include common/libraries.html %}
+    <script src="/assets/javascripts/quotes.js"></script>
+</head>
+
+<body>
+  <section id="testimonials">
+
+<div class="cust-quotes">
+  {% for quote in page.quotes %}
+    <blockquote data-timeout="4800"><p>{{quote.text}}</p><cite>{{quote.verse}}</cite></blockquote>
+  {% endfor %}
+</div>
+  </section>
+<div class="giving-footer"><p class="giving"> If you feel directed to support this ministry, contact <a href="mailto:beboldstreetministires@gmail.com">beboldstreetministries@gmail.com</a> to find out how.</p></div>
+<div class="giving-footer"><p class="giving">As a fully non-profit Christian organization we are
+  supported by people's generosity.  People just like you make the difference in our community.
+  We meet the needs of the desperate and homeless with the hope of a risen Savior.</p>
+  <p class="giving">If that sounds like something you want to spend your time or treasure on,
+    reach out to us.</p></div>``
+</body>
+
+</html>

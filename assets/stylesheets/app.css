@@ -1,0 +1,56 @@
+
+.hover-underline-menu {
+  width: 100%;
+}
+
+.hover-underline-menu {
+  padding-top: 40px;
+}
+
+.hover-underline-menu .menu a {
+  color: #d4d4d4;
+  font-size:1.5em;
+  padding: 1.2rem 1.5rem;
+}
+
+.hover-underline-menu .menu .underline-from-center {
+  position: relative;
+}
+
+.hover-underline-menu .menu .underline-from-center::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 0.125rem);
+  border-bottom: 0.125rem solid #fefefe;
+  left: 50%;
+  right: 50%;
+  transition: all 0.5s ease;
+}
+
+.hover-underline-menu .menu .underline-from-center:hover::after {
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease;
+}
+.rem75 {
+  max-width: 75rem;
+  margin:auto;
+}
+.cell-padd {
+  padding:5px;
+}
+span.product-card-desc {
+    line-height: 1.2;
+    min-height: 72px;
+}
+
+ul.menu-dark > li > a {
+    color: #404040;
+    font-size:1.4em;
+}
+ul.menu-dark > li > a:hover {
+    color: #808080;
+
+ul.menu-dark {
+    padding-top: 50px;
+}
