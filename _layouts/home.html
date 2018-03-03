@@ -51,6 +51,7 @@
         <a href="https://www.facebook.com/BeBoldStreetMinistry">
           <img src="/assets/images/theme/facebook-connect.png">
         </a>
+        {% include home/dark_menu.html %}
 
     </div>
     <div id="section2" class="section" data-name="events">
@@ -59,42 +60,22 @@
         <p><span>Purchase clothing that makes a difference.  Proceeds go to feeding,
           clothing, and transitioning homeless.</span></p>
           <div class="grid-x rem75">
+            {% for product in site.data.products %}
             <div class="cell large-2 cell-padd">
               <div class="product-card">
                 <div class="product-card-thumbnail">
-                  <a href="#"><img src="https://placehold.it/180x180"/></a>
+                  <a href="#"><img src="{{ product.image }}"/></a>
                 </div>
-                <h2 class="product-card-title"><a href="#">Sweatshirt</a></h2>
-                <span class="product-card-desc">Be Bold Street Ministries Black and white text.</span>
-                <span class="product-card-price">$50</span>
-                <div class="product-card-colors">
-                  <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
-                  <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
-                  <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
-                  <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
-                </div>
+                <h2 class="product-card-title"><a href="#">{{ product.name }}</a></h2>
+                <span class="product-card-desc">{{ product.description }}</span>
+                <span class="product-card-price">{{ product.price }}</span>
               </div>
             </div>
-            <div class="cell large-2">
-              <div class="product-card">
-                <div class="product-card-thumbnail">
-                  <a href="#"><img src="https://placehold.it/180x180"/></a>
-                </div>
-                <h2 class="product-card-title"><a href="#">Sweatshirt</a></h2>
-                <span class="product-card-desc">Be Bold Street Ministries Black and white text.</span>
-                <span class="product-card-price">$50</span>
-                <div class="product-card-colors">
-                  <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
-                  <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
-                  <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
-                  <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
-                </div>
-              </div>
-            </div>
+            {% endfor %}
         </div>
 
-
-
+        {% include home/dark_menu.html %}
+        
     </div>
     <div id="section3" class="section" data-name="events">
 
@@ -112,6 +93,8 @@
         We meet the needs of the desperate and homeless with the hope of a risen Savior.</p>
         <p>If that sounds like something you want to spend your time or treasure on,
           reach out to us.</p></div>
+
+        {% include home/dark_menu.html %}
 
     </div>
 

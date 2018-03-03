@@ -39,3 +39,18 @@
 .cell-padd {
   padding:5px;
 }
+span.product-card-desc {
+    line-height: 1.2;
+    min-height: 72px;
+}
+
+ul.menu-dark > li > a {
+    color: #404040;
+    font-size:1.4em;
+}
+ul.menu-dark > li > a:hover {
+    color: #808080;
+
+ul.menu-dark {
+    padding-top: 50px;
+}
