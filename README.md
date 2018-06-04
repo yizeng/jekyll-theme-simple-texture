@@ -9,7 +9,7 @@ which can also be forked as a boilerplate for older versions of Jekyll.
 
 - Starter-kit demo:
 <https://yizeng.github.io/jekyll-theme-simple-texture/>
-- My own personal blog: <http://yizeng.me/blog>
+- My own personal blog: <https://yizeng.me/blog>
 
 ![Screenshot - Home](assets/images/screenshots/home.png)
 

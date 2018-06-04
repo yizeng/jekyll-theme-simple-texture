@@ -17,8 +17,8 @@ redirect_from:
 
 This is a normal paragraph.
 
-This is [a link](http://yizeng.me) to my homepage.
-A [link](http://yizeng.me/blog "Yi Zeng's Blog") can also have a title.
+This is [a link](https://yizeng.me) to my homepage.
+A [link](https://yizeng.me/blog "Yi Zeng's Blog") can also have a title.
 
 This is a ***text with light and strong emphasis***.
 
