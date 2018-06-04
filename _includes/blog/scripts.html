@@ -40,63 +40,6 @@ $(document).ready(function () {
 });
 </script>
 
-<!-- Google Analytics Event tracking -->
-{% if site.google_analytics %}
-<script>
-$(document).on('click', 'footer .back-to-top, .gotop', function (event) {
-    sendGaEvent('Blog', 'Back to Top', event.currentTarget);
-});
-$(document).on('click', '.show-hidden', function (event) {
-    sendGaEvent('Post', 'Show Hidden', event.currentTarget);
-});
-$(document).on('click', 'a.internal', function(event) {
-    sendGaEvent('Blog', 'Navigate', event.currentTarget);
-});
-$('.the-header').on('click', '.nav-link a, [class$=wrapper] .results a, .nav-link button', function(event) {
-    sendGaEvent('Blog', 'Navigate', event.currentTarget);
-});
-$('.the-header').on('click', '.nav-link button', function(event) {
-    sendGaEvent('Blog', 'Navigate', event.currentTarget);
-});
-$('.the-footer').on('click', '.about h4 a', function(event) {
-    sendGaEvent('Blog', 'Go to About', event.currentTarget);
-});
-$('.the-footer').on('click', '.social-links a', function(event) {
-    sendGaEvent('Blog', 'Click Social Link', event.currentTarget);
-});
-$('.unit-article').on('click', '.tag_box.categories a', function(event) {
-    sendGaEvent('Blog', 'Click Category', event.currentTarget);
-});
-$('.unit-article').on('click', '.tag_box.tags a', function(event) {
-    sendGaEvent('Blog', 'Click Tag', event.currentTarget);
-});
-$('.unit-article').on('click', '.comments .show-hidden', function(event) {
-    sendGaEvent('Post', 'Show Comments', event.currentTarget);
-});
-$('.unit-article').on('click', '.meta .author', function(event) {
-    sendGaEvent('Post', 'Show Author', event.currentTarget);
-});
-$('.unit-article').on('click', '.meta .license-icon', function(event) {
-    sendGaEvent('Post', 'Show License', event.currentTarget);
-});
-$('.unit-article').on('click', '.meta .list-tag a', function(event) {
-    sendGaEvent('Post', 'Click Tag', event.currentTarget);
-});
-$('.unit-article').on('click', '.meta .list-category', function(event) {
-    sendGaEvent('Post', 'Click Category', event.currentTarget);
-});
-$('.unit-foot').delegate('.addthis_toolbox .btn-share-post', 'click', function(event) {
-    sendGaEvent('Post', 'Share Post', event.currentTarget);
-});
-$('.search-wrapper').on('click', '.results a', function(event) {
-    sendGaEvent('Search', 'Click Search Result', event.currentTarget);
-});
-$('.search-wrapper').on('click', '.btn-close', function(event) {
-    sendGaEvent('Search', 'Close Search', event.currentTarget);
-});
-</script>
-{% endif %}
-
 <!-- Show menu overlay + Jekyll Simple Search option -->
 <script src="{{ site.baseurl }}/assets/javascripts/jekyll-search.jquery.js"></script>
 <script>

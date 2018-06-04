@@ -11,9 +11,16 @@
     {% include common/meta.html %}
     <link href='{{ site.baseurl }}/assets/stylesheets/home.css' rel="stylesheet" type="text/css">
     {% include common/libraries.html %}
+    {% if site.google_tag_manager %}
+        {% include common/gtm-head.html %}
+    {% endif %}
 </head>
 
 <body>
+    {% if site.google_tag_manager %}
+        {% include common/gtm-body.html %}
+    {% endif %}
+
     <ul id="menu">
         <li data-menuanchor="bio"><a href="#bio">Biography</a></li>
         <li data-menuanchor="social"><a href="#social">Social Links</a></li>
