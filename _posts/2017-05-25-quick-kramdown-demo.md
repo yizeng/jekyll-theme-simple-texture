@@ -17,8 +17,8 @@ redirect_from:
 
 This is a normal paragraph.
 
-This is [a link](http://yizeng.me) to my homepage.
-A [link](http://yizeng.me/blog "Yi Zeng's Blog") can also have a title.
+This is [a link](https://yizeng.me) to my homepage.
+A [link](https://yizeng.me/blog "Yi Zeng's Blog") can also have a title.
 
 This is a ***text with light and strong emphasis***.
 
@@ -117,7 +117,10 @@ This tag will let you <strike>strikeout text</strike>.
 
 Here comes an image!
 
-![smiley](https://kramdown.gettalong.org/overview.png)
+<a class="post-image" href="https://kramdown.gettalong.org/overview.png">
+<img itemprop="image" data-src="https://kramdown.gettalong.org/overview.png" src="/assets/javascripts/unveil/loader.gif" alt="Kramdown Overview" />
+</a>
+
 
 [^1]: This is a footnote.
 

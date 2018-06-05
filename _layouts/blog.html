@@ -11,9 +11,16 @@
     {% include common/meta.html %}
     <link href='{{ site.baseurl }}/assets/stylesheets/blog.css' rel="stylesheet" type="text/css">
     {% include common/libraries.html %}
+    {% if site.google_tag_manager %}
+        {% include common/gtm-head.html %}
+    {% endif %}
 </head>
 
 <body>
+    {% if site.google_tag_manager %}
+        {% include common/gtm-body.html %}
+    {% endif %}
+
     {% include common/notices.html %}
     {% include blog/overlay.html %}
 

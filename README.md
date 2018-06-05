@@ -9,7 +9,7 @@ which can also be forked as a boilerplate for older versions of Jekyll.
 
 - Starter-kit demo:
 <https://yizeng.github.io/jekyll-theme-simple-texture/>
-- My own personal blog: <http://yizeng.me/blog>
+- My own personal blog: <https://yizeng.me/blog>
 
 ![Screenshot - Home](assets/images/screenshots/home.png)
 
@@ -78,7 +78,7 @@ i.e. `jekyllapp` in this example.
    ```ruby
    source "https://rubygems.org"
 
-   gem 'jekyll', '= 3.7.2' # locked in to be consistent GitHub Pages.
+   gem 'jekyll'
 
    group :jekyll_plugins do
      gem 'jekyll-feed'
