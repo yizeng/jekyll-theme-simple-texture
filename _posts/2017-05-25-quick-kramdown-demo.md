@@ -117,10 +117,7 @@ This tag will let you <strike>strikeout text</strike>.
 
 Here comes an image!
 
-<a class="post-image" href="https://kramdown.gettalong.org/overview.png">
-<img itemprop="image" data-src="https://kramdown.gettalong.org/overview.png" src="/assets/javascripts/unveil/loader.gif" alt="Kramdown Overview" />
-</a>
-
+![smiley](https://kramdown.gettalong.org/overview.png)
 
 [^1]: This is a footnote.
 

@@ -86,18 +86,18 @@ $(document).ready(function () {
 })(jQuery, window);
 </script>
 
-<script src='//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/jquery.fancybox.min.js'></script>
-<script src='//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/helpers/jquery.fancybox-buttons.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-buttons.min.js'></script>
 <script src="{{ site.baseurl }}/assets/javascripts/unveil/jquery.unveil.min.js"></script>
 
 <script>
-    window.jQuery.fancybox || document.write('<script src="{{ site.baseurl }}/assets/javascripts/fancybox/jquery.fancybox.pack.js"><\/script>')
-    window.jQuery.fancybox.helpers.buttons || document.write('<script src="{{ site.baseurl }}/assets/javascripts/fancybox/helpers/jquery.fancybox-buttons.js"><\/script>')
+    window.jQuery.fancybox || document.write('<script src="{{ site.baseurl }}/assets/javascripts/fancybox/jquery.fancybox.pack.js?v=2.1.4"><\/script>')
+    window.jQuery.fancybox.helpers.buttons || document.write('<script src="{{ site.baseurl }}/assets/javascripts/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"><\/script>')
 </script>
 
 <script>
-    $("head").append('<link rel="stylesheet" href="{{ site.baseurl }}/assets/javascripts/fancybox/jquery.fancybox.css" type="text/css" />');
-    $("head").append('<link rel="stylesheet" href="{{ site.baseurl }}/assets/javascripts/fancybox/helpers/jquery.fancybox-buttons.css" type="text/css" />');
+    $("head").append('<link rel="stylesheet" href="{{ site.baseurl }}/assets/javascripts/fancybox/jquery.fancybox.css?v=2.1.4" type="text/css" />');
+    $("head").append('<link rel="stylesheet" href="{{ site.baseurl }}/assets/javascripts/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" />');
     $(".post-image").fancybox({
         prevEffect: 'none',
         nextEffect: 'none',
