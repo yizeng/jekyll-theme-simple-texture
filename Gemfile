@@ -6,7 +6,7 @@ gemspec
 #
 # source "https://rubygems.org"
 
-# gem 'jekyll'
+# gem 'jekyll', '= 3.7.3' # locked in to be consistent GitHub Pages.
 
 # group :jekyll_plugins do
 #   gem 'jekyll-feed'

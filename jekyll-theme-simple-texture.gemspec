@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-simple-texture"
-  spec.version       = "0.3.4"
+  spec.version       = "0.3.5"
   spec.authors       = ["Yi Zeng"]
   spec.email         = ["iam@yizeng.me"]
 
@@ -12,10 +12,10 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_includes|_sass|LICENSE|README)}i) }
 
-  spec.add_runtime_dependency "jekyll", '~> 3.7', '>= 3.7.0'
-  spec.add_runtime_dependency "jekyll-feed", "~> 0.9.3"
-  spec.add_runtime_dependency "jekyll-redirect-from", "~> 0.12.1"
-  spec.add_runtime_dependency "jekyll-seo-tag", '~> 2.4', '>= 2.4.0'
+  spec.add_runtime_dependency "jekyll", '= 3.7.3'
+  spec.add_runtime_dependency "jekyll-feed", "~> 0.10.0"
+  spec.add_runtime_dependency "jekyll-redirect-from", "~> 0.14.0"
+  spec.add_runtime_dependency "jekyll-seo-tag", '~> 2.5', '>= 2.5.0'
   spec.add_runtime_dependency "jekyll-sitemap", '~> 1.2', '>= 1.2.0'
 
   spec.add_development_dependency "bundler", "~> 1.12"
