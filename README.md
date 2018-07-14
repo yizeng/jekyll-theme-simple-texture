@@ -78,14 +78,7 @@ i.e. `jekyllapp` in this example.
    ```ruby
    source "https://rubygems.org"
 
-   gem 'jekyll'
-
-   group :jekyll_plugins do
-     gem 'jekyll-feed'
-     gem 'jekyll-redirect-from'
-     gem 'jekyll-seo-tag'
-     gem 'jekyll-sitemap'
-   end
+   # gem "github-pages", group: :jekyll_plugins
    ```
 
 6. Run `bundle install` to install dependencies.
