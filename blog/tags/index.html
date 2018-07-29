@@ -15,7 +15,7 @@ group: navigation
 
 <ul class="tag_box tags inline">
     {% assign tags_list = sorted_tags %}
-    {% include tags_list.html %}
+    {% include helpers/tags_list %}
 </ul>
 
 {% for tag in sorted_tags %}
@@ -23,6 +23,6 @@ group: navigation
     <h3 id="{{ actual_tag_name | replace:' ','-' | replace:'#','sharp' }}">{{ actual_tag_name }}</h3>
     <ul class="post-list">
         {% assign pages_list = site.tags[actual_tag_name] %}
-        {% include pages_list.html %}
+        {% include helpers/pages_list %}
     </ul>
 {% endfor %}

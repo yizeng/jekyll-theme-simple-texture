@@ -36,11 +36,11 @@ layout: blog
                         </p>
                         <ul class="list-category list-linear">
                             <li class="list-head">{{ site.data.i18n[site.lang].categories }}: </li>
-                            {% assign categories_list = page.categories | sort %} {% include categories_list.html %}
+                            {% assign categories_list = page.categories | sort %} {% include helpers/categories_list %}
                         </ul>
                         <ul class="list-tag list-linear">
                             <li class="list-head">{{ site.data.i18n[site.lang].tags }}: </li>
-                            {% assign tags_list = page.tags | sort %} {% include tags_list.html %}
+                            {% assign tags_list = page.tags | sort %} {% include helpers/tags_list %}
                         </ul>
                     </div>
                     <div itemprop="articleBody">
