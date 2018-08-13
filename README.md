@@ -22,7 +22,7 @@ which can also be forked as a boilerplate for older versions of Jekyll.
 If you are creating a new website or blog,
 please follow the commands below first:
 
-1. Install Jekyll and [Bunlder][Bunlder]
+1. Install Jekyll and [Bundler][Bundler]
 
        gem install jekyll bundler
 
@@ -149,4 +149,4 @@ The theme is available as open source under the terms of the
     SOFTWARE.
 
 [Jekyll]: http://jekyllrb.com/
-[Bunlder]: http://bundler.io/
+[Bundler]: https://bundler.io/
