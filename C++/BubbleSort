@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std; 
+
+void swap(int *x, int *y) {
+	int temp = *x;
+	*x = *y;
+	*y = temp;
+}
+
+void bubbleSort(int arr[], int size) {
+	int i, j;
+	for (i = 0; i < size - 1; ++i) {
+		for (j = 0; j < size - i - 1; ++j) {
+			if (arr[j] > arr[j + 1])
+				swap(&arr[j], &arr[j + 1]);
+		}
+	}
+}
+
+int main() {
+	int arr[] = { 4, 1, 2, 30, 5, 22, 10 };
+	int size = sizeof(arr) / sizeof(int);
+	bubbleSort(arr, size);
+	for (int i = 0; i < size; ++i) {
+		cout << arr[i] << ' ';
+	}
+}
