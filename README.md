@@ -42,7 +42,7 @@ Then for existing Jekyll apps,
 
        gem install bundler
 
-1. Remove Jekyll auto-generated default pages `404.html`, `about.md` and `index.md` or any your custom layouts or existing theme files.
+1. Remove Jekyll auto-generated default pages `404.html`, `about.markdown` and `index.markdown` or any your custom layouts or existing theme files.
 
 1. Remove the existing `Gemfile.lock`.
 
