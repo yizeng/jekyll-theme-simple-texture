@@ -47,7 +47,7 @@ author:
     - name: vk
       url:
 home:
-  section1: <h1>Simple Texutre</h1>
+  section1: <h1>Simple Texture</h1>
   section2: <h2>A gem-based responsive simple texture styled Jekyll theme</h2>
   section3: <div class="social-links"><a class="ico-github btn" href="https://github.com/yizeng/jekyll-theme-simple-texture" title="View on GitHub"></a></div>
 blog:
