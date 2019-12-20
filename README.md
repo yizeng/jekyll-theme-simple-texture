@@ -11,7 +11,7 @@ which can also be forked as a boilerplate for older versions of Jekyll.
 <https://yizeng.github.io/jekyll-theme-simple-texture/>
 - My own personal blog: <https://yizeng.me/blog>
 
-![Screenshot - Home](assets/images/screenshots/home.png)
+![Screenshot - Home](assets/images/screenshots/homepage.png)
 
 ![Screenshot - Blog](assets/images/screenshots/post.png)
 
