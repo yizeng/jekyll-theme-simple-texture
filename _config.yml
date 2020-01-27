@@ -24,7 +24,7 @@ sass:
 url: # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: # the subpath of your site, e.g. /blog
 title: Cero
-description: "We are cero team, which works on 'WIBG if citizens mobility was climate-neutral?'"
+description: "We are cero team!"
 keywords: 'jekyll,theme,gem-based,blog'
 author:
   name:
@@ -33,22 +33,21 @@ author:
   email:
   social_links:
     - name: facebook
-      url:
+      url: https://www.facebook.com/digitalproductschool
     - name: github
-      url: https://github.com/yizeng/jekyll-theme-simple-texture
-    - name: instagram
-      url:
+      url: https://github.com/team-cero
+    - name: website
+      url: https://digitalproductschool.io/
     - name: linkedin
-      url:
+      url: https://www.linkedin.com/company/digital-product-school/
     - name: stackoverflow
-      url:
+      url: https://stackoverflow.com/c/dps/questions
     - name: twitter
-      url: 
-    - name: vk
-      url:
+      url: https://twitter.com/dpschool_io
+
 home:
   section1: <h1>Cero</h1>
-  section2: <h2>A gem-based responsive Cero styled Jekyll theme</h2>
+  section2: <h2>We are cero team, and we want to make citizens' mobility climate-neutral</h2>
   section3: <div class="social-links"><a class="ico-github btn" href="https://github.com/yizeng/jekyll-theme-simple-texture" title="View on GitHub"></a></div>
 blog:
   cc_license: http://creativecommons.org/licenses/by-sa/4.0/ # A link to CC License of your choice.
