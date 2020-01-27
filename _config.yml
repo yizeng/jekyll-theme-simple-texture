@@ -24,7 +24,7 @@ sass:
 url: # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: # the subpath of your site, e.g. /blog
 title: Cero
-description: "A gem-based responsive Cero styled Jekyll theme."
+description: "We are cero team, which works on 'WIBG if citizens mobility was climate-neutral?'"
 keywords: 'jekyll,theme,gem-based,blog'
 author:
   name:
