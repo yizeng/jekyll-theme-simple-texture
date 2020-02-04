@@ -6,4 +6,6 @@ categories: [uncategorized]
 tags: [random, jekyll]
 redirect_from:
 ---
-Hello World! This is the beginning of this theme.
+Hello DPS World! I'm Christine, nice to meet you all.
+
+![](assets/images/christine.png)
