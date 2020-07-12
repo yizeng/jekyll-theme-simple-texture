@@ -66,3 +66,5 @@ paths:
   blog: /blog/
   categories: /blog/categories/
   tags: /blog/tags/
+
+theme: jekyll-theme-midnight
