@@ -20,12 +20,11 @@ kramdown:
 sass:
   style: compressed
 
-# Site Data
-url: # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: # the subpath of your site, e.g. /blog
-title: Simple Texture
-description: "A gem-based responsive simple texture styled Jekyll theme."
-keywords: 'jekyll,theme,gem-based,blog'
+url:
+baseurl:
+title: Choan's blog
+description: "초안 블로그"
+keywords: 'blog,thinking,startup'
 author:
   name:
   job_title:
@@ -43,23 +42,23 @@ author:
     - name: stackoverflow
       url:
     - name: twitter
-      url: 
+      url:
     - name: vk
       url:
 home:
-  section1: <h1>Simple Texture</h1>
-  section2: <h2>A gem-based responsive simple texture styled Jekyll theme</h2>
-  section3: <div class="social-links"><a class="ico-github btn" href="https://github.com/yizeng/jekyll-theme-simple-texture" title="View on GitHub"></a></div>
+  section1: <h1>초안 블로그</h1>
+  section2: <h2>내 생각을 정리</h2>
+  section3: <div class="social-links"><a class="ico-github btn" href="https://github.com/choani" title="View on GitHub"></a></div>
 blog:
-  cc_license: http://creativecommons.org/licenses/by-sa/4.0/ # A link to CC License of your choice.
-  cc_license_image: /assets/images/theme/cc-by-sa.png # An image of your CC License. 
+  cc_license: http://creativecommons.org/licenses/by-sa/4.0/
+  cc_license_image: /assets/images/theme/cc-by-sa.png
   footer_content: A gem-based responsive simple texture styled <a href="http://jekyllrb.com/">Jekyll</a> theme.
 
 disqus:
-  shortname: # e.g. yizeng
-  public_key: # e.g. ULZ0b9TFefCUJHKQd4JCKv2v3u27YoG7YG8zXPewkWrT333Z0Se9YnxLzoV6VM8W
-google_tag_manager: # e.g. 'GTM-KCQJXZ8F'
-addthis_public_id: # AddThis sharing plugin. See http://www.addthis.com/. E.g. ra-53329e27694534j5 
+  shortname:
+  public_key:
+google_tag_manager:
+addthis_public_id:
 
 paths:
   home: /

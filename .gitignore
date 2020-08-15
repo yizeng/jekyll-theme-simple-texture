@@ -16,3 +16,4 @@ yarn.lock
 # Ignore Yard Doc
 /doc
 .yardoc/
+.idea/
