@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-simple-texture"
-  spec.version       = "0.5.2"
+  spec.version       = "0.5.3"
   spec.authors       = ["Yi Zeng"]
   spec.email         = ["developer@yizeng.me"]
 
@@ -16,4 +16,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 2.4.19"
   spec.add_development_dependency "rake", "~> 13.0.6"
+  spec.add_development_dependency "webrick", "~> 1.8.1"
 end
