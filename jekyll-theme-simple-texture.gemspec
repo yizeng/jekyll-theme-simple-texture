@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-simple-texture"
-  spec.version       = "0.5.1"
+  spec.version       = "0.5.2"
   spec.authors       = ["Yi Zeng"]
   spec.email         = ["developer@yizeng.me"]
 
@@ -12,8 +12,8 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_includes|_sass|LICENSE|README)}i) }
 
-  spec.add_runtime_dependency "github-pages", '~> 214'
+  spec.add_runtime_dependency "github-pages", '~> 228'
 
-  spec.add_development_dependency "bundler", "~> 2.1.4"
-  spec.add_development_dependency "rake", "~> 13.0.3"
+  spec.add_development_dependency "bundler", "~> 2.4.19"
+  spec.add_development_dependency "rake", "~> 13.0.6"
 end
