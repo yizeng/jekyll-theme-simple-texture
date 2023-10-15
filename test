@@ -1,0 +1,9 @@
+// Kotlin github Code Test
+
+fun main(){
+  var a : Int = 10
+  var b : Int = 20
+  
+  println("${a+b}")
+
+}
